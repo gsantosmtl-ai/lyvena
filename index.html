@@ -1,0 +1,420 @@
+<!doctype html><html lang="pt-BR"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>LYVENA — Marca</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Archivo:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --cypress:#103F35; --bone:#F6F5F2; --sand:#E7D9CC;
+  --copper:#B76545; --sage:#8AA793; --ink:#0E1A15; --mist:#DDD6CC;
+  --cypress-soft:#1A5245;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bone);color:var(--ink);font-family:'Archivo',Helvetica,Arial,sans-serif;font-size:16px;line-height:1.62;-webkit-font-smoothing:antialiased}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+.band{padding:clamp(56px,9vw,112px) 0}
+.band.dark{background:var(--cypress);color:var(--bone)}
+.band.sand{background:var(--sand)}
+.in{max-width:1080px;margin:0 auto;padding-inline:clamp(18px,4vw,34px)}
+.in.narrow{max-width:760px}
+.kick{font-family:'JetBrains Mono',ui-monospace,monospace;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--copper);margin:0 0 18px}
+.dark .kick{color:var(--sage)}
+h1{font-family:'Instrument Serif',Georgia,serif;font-weight:400;font-size:clamp(2.6rem,8vw,5.2rem);line-height:1.02;margin:0;letter-spacing:.01em}
+h2{font-family:'Instrument Serif',Georgia,serif;font-weight:400;font-size:clamp(1.9rem,4.4vw,3rem);line-height:1.12;margin:0 0 20px;letter-spacing:-.005em;text-wrap:balance}
+h3{font-family:'JetBrains Mono',ui-monospace,monospace;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--copper);margin:48px 0 16px;font-weight:500}
+.dark h3{color:var(--sage)}
+p{margin:0 0 18px;max-width:64ch}
+.big{font-family:'Instrument Serif',Georgia,serif;font-size:clamp(1.5rem,3.4vw,2.3rem);line-height:1.26;max-width:22ch;margin:0}
+.lede{font-size:clamp(1.02rem,1.9vw,1.2rem);line-height:1.6;max-width:58ch;color:var(--cypress)}
+.dark .lede{color:var(--sand)}
+.sm{font-size:14px;line-height:1.6}
+.mono{font-family:'JetBrains Mono',ui-monospace,monospace}
+em.hl{font-style:normal;color:var(--copper)}
+.dark em.hl{color:var(--sage)}
+
+/* capa */
+.cover{background:var(--bone);color:var(--ink);min-height:92vh;display:flex;flex-direction:column;justify-content:center;position:relative;overflow:hidden}
+.cover .in{position:relative;z-index:2}
+.clogo{display:block;width:100%;max-width:min(660px,86vw);height:auto;margin:6px 0 0 -3%}
+.cp{font-family:'JetBrains Mono',ui-monospace,monospace;font-size:clamp(10px,1.5vw,12px);letter-spacing:.34em;text-transform:uppercase;color:var(--cypress);opacity:.62;margin:14px 0 0}
+.ct2{font-family:'Instrument Serif',Georgia,serif;font-style:italic;font-size:clamp(1.2rem,2.8vw,1.75rem);color:var(--cypress);margin:26px 0 0}
+.cmeta{margin-top:50px;padding-top:22px;border-top:1px solid var(--mist);font-family:'JetBrains Mono',ui-monospace,monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--cypress);opacity:.6;display:flex;flex-wrap:wrap;gap:8px 28px}
+.cover .kick{color:var(--copper)}
+/* canal decorativo da capa */
+.cline{position:absolute;left:clamp(18px,4vw,34px);top:0;bottom:0;width:1px;background:var(--sage);opacity:.5;z-index:1}
+.cdot{position:absolute;left:calc(clamp(18px,4vw,34px) - 3px);top:62%;width:7px;height:7px;border-radius:50%;background:var(--copper);z-index:1}
+@media (max-width:620px){.clogo{margin-left:0}}
+
+/* grid */
+.g{display:grid;gap:clamp(16px,2.4vw,26px)}
+.g2{grid-template-columns:repeat(auto-fit,minmax(282px,1fr))}
+.g3{grid-template-columns:repeat(auto-fit,minmax(222px,1fr))}
+.g4{grid-template-columns:repeat(auto-fit,minmax(176px,1fr))}
+
+/* bloco de declaração */
+.decl{border-left:2px solid var(--copper);padding-left:clamp(18px,3vw,26px);margin:0 0 34px;max-width:54ch}
+.dark .decl{border-left-color:var(--sage)}
+.decl .l{font-family:'JetBrains Mono',ui-monospace,monospace;font-size:9.5px;letter-spacing:.17em;text-transform:uppercase;color:var(--copper);margin-bottom:10px}
+.dark .decl .l{color:var(--sage)}
+.decl .e{font-family:'Instrument Serif',Georgia,serif;font-style:italic;font-size:clamp(1.25rem,2.6vw,1.6rem);line-height:1.3;display:block;margin-bottom:9px}
+.decl .p{font-size:14.5px;line-height:1.58;opacity:.85}
+
+/* card */
+.c{background:rgba(255,255,255,.55);border:1px solid var(--mist);padding:clamp(18px,2.4vw,24px)}
+.sand .c{background:rgba(255,255,255,.5)}
+.dark .c{background:rgba(245,239,231,.06);border-color:rgba(245,239,231,.16)}
+.c .n{font-family:'JetBrains Mono',ui-monospace,monospace;font-size:9.5px;letter-spacing:.15em;text-transform:uppercase;color:var(--copper);margin-bottom:11px}
+.dark .c .n{color:var(--sage)}
+.c .t{font-family:'Instrument Serif',Georgia,serif;font-size:1.32rem;line-height:1.18;margin-bottom:9px}
+.c p{font-size:14px;line-height:1.56;margin:0;max-width:none;opacity:.88}
+
+/* valor */
+.v{border-top:1px solid var(--mist);padding:26px 0;display:grid;grid-template-columns:minmax(0,1fr);gap:10px}
+.dark .v{border-top-color:rgba(245,239,231,.18)}
+.v:last-of-type{border-bottom:1px solid var(--mist)}
+.dark .v:last-of-type{border-bottom-color:rgba(245,239,231,.18)}
+.v .vn{font-family:'Instrument Serif',Georgia,serif;font-size:clamp(1.3rem,2.6vw,1.7rem);line-height:1.15}
+.v .vd{font-size:14.5px;line-height:1.6;max-width:62ch;margin:0;opacity:.9}
+.v .vx{font-size:13px;line-height:1.55;max-width:58ch;margin:0;padding-left:14px;border-left:2px solid var(--copper);opacity:.78}
+@media (min-width:760px){.v{grid-template-columns:260px minmax(0,1fr);gap:8px 32px}.v .vn{grid-row:span 2}}
+
+/* paleta */
+.pal{display:grid;grid-template-columns:repeat(auto-fit,minmax(132px,1fr));gap:0;border:1px solid var(--mist);margin:8px 0 0}
+.dark .pal{border-color:rgba(245,239,231,.18)}
+.sw{border-right:1px solid var(--mist)}
+.dark .sw{border-right-color:rgba(245,239,231,.18)}
+.sw:last-child{border-right:none}
+.sw .k{height:clamp(92px,13vw,136px)}
+.sw .b{padding:13px 14px;background:var(--bone)}
+.dark .sw .b{background:transparent}
+.sw .nm{font-size:13px;font-weight:600;line-height:1.2}
+.sw .hx{font-family:'JetBrains Mono',ui-monospace,monospace;font-size:10px;letter-spacing:.04em;opacity:.6;margin-top:3px}
+.sw .fn{font-family:'JetBrains Mono',ui-monospace,monospace;font-size:8.5px;letter-spacing:.11em;text-transform:uppercase;color:var(--copper);margin-top:9px}
+@media (max-width:520px){.sw{border-right:none;border-bottom:1px solid var(--mist)}}
+
+/* imagem */
+.shot{background:rgba(255,255,255,.5);border:1px solid var(--mist);overflow:hidden}
+.dark .shot{background:rgba(245,239,231,.05);border-color:rgba(245,239,231,.16)}
+.shot img{display:block;width:100%;height:auto}
+.shot .cap{padding:11px 14px;font-family:'JetBrains Mono',ui-monospace,monospace;font-size:9.5px;letter-spacing:.11em;text-transform:uppercase;opacity:.6;border-top:1px solid var(--mist)}
+.dark .shot .cap{border-top-color:rgba(245,239,231,.16)}
+.ph{display:flex;align-items:center;justify-content:center;min-height:168px;padding:22px;text-align:center;font-family:'JetBrains Mono',ui-monospace,monospace;font-size:10px;letter-spacing:.13em;text-transform:uppercase;color:var(--sage);background:repeating-linear-gradient(135deg,transparent,transparent 9px,rgba(168,178,154,.13) 9px,rgba(168,178,154,.13) 10px)}
+
+/* lista */
+ul.ls{list-style:none;padding:0;margin:18px 0}
+ul.ls li{position:relative;padding:11px 0 11px 22px;border-bottom:1px solid var(--mist);font-size:14.5px;line-height:1.56}
+.dark ul.ls li{border-bottom-color:rgba(245,239,231,.16)}
+ul.ls li:last-child{border-bottom:none}
+ul.ls li::before{content:"";position:absolute;left:0;top:1.3em;width:5px;height:5px;background:var(--copper);border-radius:50%}
+.dark ul.ls li::before{background:var(--sage)}
+ol.ns{list-style:none;counter-reset:n;padding:0;margin:18px 0}
+ol.ns li{counter-increment:n;position:relative;padding:14px 0 14px 42px;border-bottom:1px solid var(--mist);font-size:15px;line-height:1.56}
+.dark ol.ns li{border-bottom-color:rgba(245,239,231,.16)}
+ol.ns li:last-child{border-bottom:none}
+ol.ns li::before{content:"0" counter(n);position:absolute;left:0;top:15px;font-family:'JetBrains Mono',ui-monospace,monospace;font-size:11px;letter-spacing:.08em;color:var(--copper)}
+.dark ol.ns li::before{color:var(--sage)}
+
+/* dois lados */
+.vs{display:grid;grid-template-columns:repeat(auto-fit,minmax(272px,1fr));border:1px solid var(--mist);margin:24px 0}
+.dark .vs{border-color:rgba(245,239,231,.18)}
+.vs>div{padding:20px 22px}
+.vs>div+div{border-left:1px solid var(--mist)}
+.dark .vs>div+div{border-left-color:rgba(245,239,231,.18)}
+.vs .h{font-family:'JetBrains Mono',ui-monospace,monospace;font-size:9.5px;letter-spacing:.15em;text-transform:uppercase;margin-bottom:13px}
+.vs .no .h{color:var(--copper)} .vs .si .h{color:var(--cypress)}
+.dark .vs .si .h{color:var(--sage)}
+.vs ul{margin:0;padding-left:18px} .vs li{font-size:13.5px;line-height:1.5;margin-bottom:8px;opacity:.9}
+@media (max-width:620px){.vs>div+div{border-left:none;border-top:1px solid var(--mist)}}
+
+/* números */
+.nums{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1px;background:var(--mist);border:1px solid var(--mist);margin:28px 0 0}
+.dark .nums{background:rgba(245,239,231,.18);border-color:rgba(245,239,231,.18)}
+.nums>div{background:var(--bone);padding:17px 18px}
+.sand .nums>div{background:var(--sand)}
+.dark .nums>div{background:var(--cypress)}
+.nums .l{font-family:'JetBrains Mono',ui-monospace,monospace;font-size:9px;letter-spacing:.13em;text-transform:uppercase;opacity:.55;margin-bottom:7px}
+.nums .vv{font-family:'Instrument Serif',Georgia,serif;font-size:1.6rem;line-height:1.05}
+.nums .s{font-size:11.5px;line-height:1.4;opacity:.65;margin-top:5px}
+
+/* nav */
+.tn{position:sticky;top:0;z-index:30;background:rgba(245,239,231,.93);backdrop-filter:blur(8px);border-bottom:1px solid var(--mist)}
+.tnin{max-width:1080px;margin:0 auto;padding:0 clamp(18px,4vw,34px);display:flex;gap:2px;overflow-x:auto;scrollbar-width:none}
+.tnin::-webkit-scrollbar{display:none}
+.tn a{font-family:'JetBrains Mono',ui-monospace,monospace;font-size:10px;letter-spacing:.11em;text-transform:uppercase;color:var(--cypress);opacity:.62;text-decoration:none;padding:14px 11px;white-space:nowrap;border-bottom:2px solid transparent}
+.tn a:hover{opacity:1;border-bottom-color:var(--copper)}
+.tn .brand{font-family:'Instrument Serif',Georgia,serif;font-size:15px;letter-spacing:.17em;opacity:1;padding-right:18px;text-transform:none}
+
+.vp{border:1px solid var(--mist);margin:12px 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(252px,1fr))}
+.vp>div{padding:15px 17px;font-size:13.5px;line-height:1.55}
+.vp>div+div{border-left:1px solid var(--mist)}
+.vp .vt{font-family:'JetBrains Mono',ui-monospace,monospace;font-size:9px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:8px}
+.vp .bad{background:rgba(183,101,69,.07)} .vp .bad .vt{color:var(--copper)} .vp .bad i{color:var(--copper);font-style:normal}
+.vp .good{background:rgba(138,167,147,.14)} .vp .good .vt{color:var(--cypress)}
+@media (max-width:640px){.vp>div+div{border-left:none;border-top:1px solid var(--mist)}}
+.chk{list-style:none;padding:0;margin:18px 0}
+.chk li{position:relative;padding:11px 0 11px 30px;border-bottom:1px solid var(--mist);font-size:14.5px;line-height:1.55}
+.chk li:last-child{border-bottom:none}
+.chk li::before{content:"";position:absolute;left:0;top:14px;width:13px;height:13px;border:1px solid var(--sage);border-radius:2px}
+footer{background:var(--cypress);color:var(--sage);padding:46px 0 56px;font-family:'JetBrains Mono',ui-monospace,monospace;font-size:10px;letter-spacing:.09em;line-height:2}
+footer a{color:var(--sand)}
+</style>
+</head><body>
+
+<div class="cover" id="top">
+  <div class="cline"></div><div class="cdot"></div>
+  <div class="in">
+    <p class="kick">Supplements LLC · outubro 2026</p>
+    <h1 style="margin:0"><img class="clogo" src="assets/marca/logo-v2.png" alt="LYVENA Health" width="1083" height="340"></h1>
+    <p class="cp">li · ve · na &nbsp;&nbsp;|&nbsp;&nbsp; LEE-vay-nah</p>
+    <p class="ct2">Progress, quietly.</p>
+    <div class="cmeta"><span>A marca</span><span>O conceito</span><span>As aplicações</span></div>
+  </div>
+</div>
+
+<nav class="tn"><div class="tnin">
+  <a class="brand" href="#top">LYVENA</a>
+  <a href="#marca">A marca</a><a href="#conceito">O conceito</a>
+  <a href="#identidade">A identidade</a><a href="#aplicacoes">As aplicações</a><a href="#pedido">O pedido</a>
+</div></nav>
+
+<section class="band sand" id="marca">
+  <div class="in">
+    <p class="kick">01 · A marca</p>
+    <h2>O caminho por onde a vida passa</h2>
+    <p class="lede"><em class="hl">LY</em> de <i>live</i>, vida. <em class="hl">VENA</em> do latim <i>vena</i>, a veia — o canal por onde a vida corre. Três sílabas, tônica no meio, som contínuo e sem pressa.</p>
+
+    <div class="g g2" style="margin-top:30px">
+      <div>
+        <div class="decl"><div class="l">Essência</div><span class="e">Progress, quietly.</span><div class="p">Progresso, sem alarde.</div></div>
+        <div class="decl"><div class="l">Propósito</div><span class="e">Help people sustain better choices — not for a month, for a life.</span><div class="p">Ajudar as pessoas a sustentar escolhas melhores — não por um mês, por uma vida.</div></div>
+      </div>
+      <div>
+        <div class="decl"><div class="l">Missão</div><span class="e">Turn science into protocols that fit a real week, and stay with the people who start one.</span><div class="p">Transformar ciência em protocolos que cabem numa semana real, e acompanhar quem começou até o fim.</div></div>
+        <div class="decl"><div class="l">Visão</div><span class="e">Become the brand people look for after they have tried everything else.</span><div class="p">Ser a marca que as pessoas procuram depois de já terem tentado de tudo.</div></div>
+      </div>
+    </div>
+
+    <h3>Valores</h3>
+    <p class="sm" style="opacity:.78;margin-bottom:4px">Cada um vem com o que <b>proíbe</b> a empresa de fazer — é essa parte que vale sob pressão por resultado.</p>
+    <div class="g g4">
+      <div class="c"><div class="t">Evidence Over Hype</div><p>Estudo que sustente <b>a nossa dose</b>, não a substância em geral.</p></div>
+      <div class="c"><div class="t">Dose Honesty</div><p>Miligramas abertos no rótulo. <b>Nunca</b> blend proprietário.</p></div>
+      <div class="c"><div class="t">Follow-Through</div><p>A venda é o começo. Acompanhamento em cada fase, dentro do orçamento.</p></div>
+      <div class="c"><div class="t">No Miracles</div><p>Sem prazo, sem quilos, sem antes-e-depois. Vendemos método.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="band dark" id="conceito">
+  <div class="in">
+    <p class="kick">02 · O conceito</p>
+    <p class="big">Quase ninguém desiste na semana 1.<br>Desiste na semana 5.</p>
+    <p class="lede" style="margin-top:30px">Na semana 5 o entusiasmo acabou e o resultado ainda não apareceu. É o buraco onde a categoria perde o cliente — e onde ninguém está. O público não precisa aprender a começar: já começou duas, três vezes. <b>O que falta não é produto, é sequência.</b></p>
+
+    <h3>Posicionamento</h3>
+    <p style="font-size:clamp(1.05rem,2vw,1.25rem);line-height:1.5;max-width:54ch">Para <b>mulheres que já tentaram emagrecer e pararam no meio</b>, LYVENA é o <b>protocolo de seis meses</b> que combina <b>dose aberta no rótulo com acompanhamento em cada fase</b>.</p>
+
+    <h3>O espaço que ocupamos</h3>
+    <div class="vs">
+      <div class="no"><div class="h">Onde todo mundo está</div><ul>
+        <li>Promessa agressiva com blend proprietário</li>
+        <li>Ou promessa contida com rótulo igualmente fechado</li>
+        <li>Nos dois casos, o cliente não verifica nada</li>
+      </ul></div>
+      <div class="si"><div class="h">Onde a LYVENA está</div><ul>
+        <li>Promessa contida, sem velocidade e sem quilos</li>
+        <li>Dose aberta em miligramas, ingrediente por ingrediente</li>
+        <li>Seis meses, quatro fases, acompanhamento em cada uma</li>
+      </ul></div>
+    </div>
+    <p style="opacity:.85">Esse espaço é defensável porque ocupá-lo exige decisão de produto, não só de comunicação. Copiar o discurso é de graça; <b>copiar a dose custa margem</b>.</p>
+
+    <div class="nums">
+      <div><div class="l">Protocolo</div><div class="vv">6 meses</div><div class="s">quatro fases</div></div>
+      <div><div class="l">Rótulo</div><div class="vv">mg abertos</div><div class="s">sem blend</div></div>
+      <div><div class="l">USPTO</div><div class="vv">0 conflitos</div><div class="s">raio fonético vazio</div></div>
+      <div><div class="l">Flórida</div><div class="vv">Livre</div><div class="s">entidade e marca estadual</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="identidade">
+  <div class="in">
+    <p class="kick">03 · A identidade</p>
+    <h2>Verde profundo, terracota e muito espaço</h2>
+    <p class="lede">Escolhida para funcionar em três lugares ao mesmo tempo: o rótulo na mão, o anúncio em miniatura no feed e o checkout no celular. Esta página usa as cores da marca.</p>
+
+    <h3>Logotipo</h3>
+    <div class="g g2">
+      <div style="background:var(--bone);border:1px solid var(--mist);padding:38px 26px;text-align:center">
+        <img src="assets/marca/logo-v2.png" alt="Logotipo primário" width="1083" height="340" style="display:block;width:100%;max-width:330px;height:auto;margin:0 auto">
+        <div class="mono" style="font-size:9px;letter-spacing:.2em;margin-top:18px;opacity:.5">PRIMÁRIA · SOBRE OFF WHITE</div>
+      </div>
+      <div style="background:var(--cypress);border:1px solid var(--cypress);padding:38px 26px;text-align:center">
+        <img src="assets/marca/logo-v2-invertido.png" alt="Logotipo invertido" width="1083" height="340" style="display:block;width:100%;max-width:330px;height:auto;margin:0 auto">
+        <div class="mono" style="font-size:9px;letter-spacing:.2em;margin-top:18px;color:var(--sage)">INVERTIDA · SOBRE NATURAL GREEN</div>
+      </div>
+    </div>
+    <ul class="ls">
+      <li><b>Caixa alta, espaçamento aberto.</b> Na caixa baixa a cauda do “y” passava por baixo do “v” e o nome lia “Lyena” em tamanho pequeno. Em caixa alta a ambiguidade não tem como acontecer.</li>
+      <li><b>Área de proteção</b> igual à altura do <b>L</b>. <b>Mínimo</b> de 24 mm impresso e 90 px digital; abaixo disso, só o monograma <b>LY</b>.</li>
+      <li><b>™ e não ®</b> até o registro sair.</li>
+    </ul>
+
+    <h3>Paleta</h3>
+    <div id="pal"></div>
+    <p class="sm" style="margin-top:18px"><b>45 / 15 / 30 / 10.</b> Off White em 45% da peça, Beige em 15%, Natural Green em 30%, Terracotta em 10%. <b>Terracotta é exclusiva da ação</b> — botão, selo, número. Se virar cor decorativa, o botão para de ser visto.</p>
+
+    <h3>O canal · grafismo proprietário</h3>
+    <div class="g g2" style="align-items:center">
+      <div>
+        <p>Uma linha vertical fina com um ponto sobre ela. Vem do significado do nome e marca a posição da pessoa no protocolo: <b>o ponto sobe conforme as fases avançam</b>.</p>
+        <p class="sm" style="opacity:.8">É o que torna a marca reconhecível quando copiarem a paleta. Aplica na lateral do rótulo, no divisor da página, no topo do e-mail e na lateral da caixa — que vira régua de progresso em cima da pia.</p>
+      </div>
+      <div style="position:relative;border:1px solid var(--mist);background:rgba(255,255,255,.5);padding:36px 24px 36px 58px;min-height:190px;display:flex;flex-direction:column;justify-content:space-between">
+        <div style="position:absolute;left:30px;top:24px;bottom:24px;width:1px;background:var(--sage)"></div>
+        <div style="position:absolute;left:26px;top:30%;width:9px;height:9px;border-radius:50%;background:var(--copper)"></div>
+        <div class="mono" style="font-size:10px;letter-spacing:.14em;opacity:.45">FASE 01 · ADAPTAÇÃO</div>
+        <div class="mono" style="font-size:10px;letter-spacing:.14em;color:var(--copper)">FASE 02 · CONSTÂNCIA</div>
+        <div class="mono" style="font-size:10px;letter-spacing:.14em;opacity:.45">FASE 03 · MANUTENÇÃO</div>
+        <div class="mono" style="font-size:10px;letter-spacing:.14em;opacity:.45">FASE 04 · LONGEVIDADE</div>
+      </div>
+    </div>
+
+    <h3>Tipografia</h3>
+    <div class="g g3">
+      <div class="c"><div class="n">Logotipo e título</div><div class="t" style="font-family:'Instrument Serif',Georgia,serif">Playfair Display</div><p>Serifada de contraste alto. No logotipo, caixa alta.</p></div>
+      <div class="c"><div class="n">Texto e rótulo</div><div class="t">Montserrat</div><p>Sans geométrica. Legível a 7 pt no rótulo e em miniatura no anúncio.</p></div>
+      <div class="c"><div class="n">Dose e fase</div><div class="t mono" style="font-size:1.1rem">1.200 mg</div><p>Monoespaçada. Faz o número parecer dado — e dado é o que a marca vende.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="band sand" id="aplicacoes">
+  <div class="in">
+    <p class="kick">04 · As aplicações</p>
+    <h2>A marca vira pote, caixa e rótulo</h2>
+    <p class="lede">Marca-mãe forte e descritores funcionais curtos. Nenhum sub-nome ganha identidade própria — isso diluiria a única marca que vamos registrar.</p>
+
+    <div class="g g3">
+      <div class="c"><div class="n">Protocolo</div><div class="t">LYVENA CORE</div><p>Âncora metabólica.</p></div>
+      <div class="c"><div class="n">Protocolo</div><div class="t">LYVENA RITUAL</div><p>Saciedade diária.</p></div>
+      <div class="c"><div class="n">Order bump</div><div class="t">LYVENA CURB</div><p>Vontade de doce.</p></div>
+      <div class="c"><div class="n">Order bump</div><div class="t">LYVENA IGNITE</div><p>Termogênico da manhã.</p></div>
+      <div class="c"><div class="n">Fase 4</div><div class="t">LYVENA RENEW</div><p>Longevidade.</p></div>
+      <div class="c"><div class="n">Expansão</div><div class="t">LYVENA GLOW</div><p>Linha cosmética.</p></div>
+    </div>
+
+    <h3>O rótulo</h3>
+    <p>É a peça mais importante da marca: onde o valor central deixa de ser discurso e vira prova, e o único ponto de contato que a cliente olha por seis meses.</p>
+    <ol class="ns">
+      <li><b>LYVENA</b> no topo. Nome do SKU abaixo, menor.</li>
+      <li><b>A fase do protocolo</b> em monoespaçada, com o canal na lateral.</li>
+      <li><b>A dose em destaque, na frente do pote</b> — ingrediente e miligramas, visível sem virar.</li>
+      <li><b>Supplement Facts</b> e disclaimer da FDA no painel traseiro, em inglês.</li>
+    </ol>
+    <div class="c" style="border-left:2px solid var(--copper)">
+      <div class="n">Decisão de design que é decisão de negócio</div>
+      <p style="font-size:14.5px">A dose na frente facilita a cópia da fórmula. É escolha consciente: o blend proprietário protege a fórmula e destrói o argumento da marca. Entre proteger a fórmula e proteger o posicionamento, esta marca protege o posicionamento.</p>
+    </div>
+
+    <h3>Estudos de aplicação</h3>
+    <p class="sm" style="opacity:.78;margin-bottom:4px">Material de direção para o designer, não arte final.</p>
+    <div id="gal"></div>
+
+    <h3>O que corrigir antes de produzir</h3>
+    <ul class="ls">
+      <li><b>O ® nos estudos.</b> A marca não está registrada — usar ® antes da concessão é declaração falsa. Até sair, <b>™</b>.</li>
+      <li><b>“Lyvena Health” como logotipo.</b> Registrar <b>LYVENA</b> sozinho: “Health” é descritivo, não acrescenta proteção e amarra a marca a saúde. A marca não precisa ser igual ao domínio.</li>
+      <li><b>A dose não está na frente do pote.</b> “Energy · immunity · daily balance” são adjetivos, não miligramas.</li>
+      <li><b>A linha é um catálogo</b> — multivitamínico, colágeno, ômega 3. O nosso é um protocolo de seis meses com quatro SKUs encadeados.</li>
+      <li><b>O grafismo de ondas disputa com o canal.</b> Escolher uma assinatura só; as duas juntas viram ruído.</li>
+      <li><b>Gradiente metálico na folha</b> morre em miniatura e exige hot stamping no rótulo.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="band" id="pedido">
+  <div class="in narrow">
+    <p class="kick">05 · O pedido</p>
+    <h2>O que precisa ser decidido</h2>
+    <ol class="ns">
+      <li><b>Aprovar LYVENA como nome.</b> É a decisão que destrava todas as outras.</li>
+      <li><b>Abrir a entidade na Flórida e registrar domínio e perfis</b> — tudo no mesmo dia, antes de qualquer conversa externa. <b>lyvenahealth.com</b> está livre.</li>
+      <li><b>Depositar o pedido federal de marca para suplemento e para cosmético ao mesmo tempo</b>, com parecer de advogado de PI antes do depósito. <span style="opacity:.72">Nos EUA o pedido exige declarar a categoria do produto e a taxa é cobrada por categoria — suplemento é a <span class="mono">005</span>, cosmético é a <span class="mono">003</span>.</span></li>
+      <li><b>Fechar o rótulo com a dose na frente</b> desde o primeiro rascunho.</li>
+    </ol>
+    <div class="c" style="border-left:2px solid var(--copper);margin-top:18px">
+      <div class="n">Quanto custa o registro · tabela oficial do USPTO, outubro de 2026</div>
+      <p style="font-size:14.5px">Taxas de governo, por categoria. Não incluem advogado.</p>
+      <div style="overflow-x:auto;margin:14px 0"><table style="width:100%;border-collapse:collapse;min-width:480px;font-size:13.5px">
+        <tr style="border-bottom:1px solid var(--mist)">
+          <th style="text-align:left;padding:9px 14px 9px 0;font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.13em;text-transform:uppercase;color:var(--copper);font-weight:500">Quando</th>
+          <th style="text-align:left;padding:9px 14px 9px 0;font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.13em;text-transform:uppercase;color:var(--copper);font-weight:500">O quê</th>
+          <th style="text-align:right;padding:9px 14px 9px 0;font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.13em;text-transform:uppercase;color:var(--copper);font-weight:500">Por categoria</th>
+          <th style="text-align:right;padding:9px 0;font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.13em;text-transform:uppercase;color:var(--copper);font-weight:500">Duas</th></tr>
+        <tr style="border-bottom:1px solid var(--mist)"><td style="padding:10px 14px 10px 0">Agora</td><td style="padding:10px 14px 10px 0">Depósito do pedido</td><td class="mono" style="text-align:right;padding:10px 14px 10px 0">US$ 350</td><td class="mono" style="text-align:right;padding:10px 0;font-weight:600">US$ 700</td></tr>
+        <tr style="border-bottom:1px solid var(--mist)"><td style="padding:10px 14px 10px 0">Ao começar a vender</td><td style="padding:10px 14px 10px 0">Declaração de uso</td><td class="mono" style="text-align:right;padding:10px 14px 10px 0">US$ 150</td><td class="mono" style="text-align:right;padding:10px 0;font-weight:600">US$ 300</td></tr>
+        <tr style="border-bottom:1px solid var(--mist);background:rgba(183,101,69,.07)"><td style="padding:10px 14px 10px 0"><b>Até o registro sair</b></td><td style="padding:10px 14px 10px 0"></td><td style="padding:10px 14px 10px 0"></td><td class="mono" style="text-align:right;padding:10px 0;font-weight:600">US$ 1.000</td></tr>
+        <tr style="border-bottom:1px solid var(--mist)"><td style="padding:10px 14px 10px 0">Anos 5 e 6</td><td style="padding:10px 14px 10px 0">Declaração de uso continuado</td><td class="mono" style="text-align:right;padding:10px 14px 10px 0">US$ 325</td><td class="mono" style="text-align:right;padding:10px 0">US$ 650</td></tr>
+        <tr><td style="padding:10px 14px 10px 0">A cada 10 anos</td><td style="padding:10px 14px 10px 0">Renovação</td><td class="mono" style="text-align:right;padding:10px 14px 10px 0">US$ 650</td><td class="mono" style="text-align:right;padding:10px 0">US$ 1.300</td></tr>
+      </table></div>
+      <p style="font-size:14.5px"><b>US$ 400 que dá para não gastar.</b> Se a descrição do produto for escrita à mão no formulário, o USPTO cobra <b>US$ 200 a mais por categoria</b>. Usando as descrições já aprovadas do manual do próprio USPTO, essa taxa não existe. As duas que servem para nós: <span class="mono">005-101 · Dietary supplements</span> e <span class="mono">003-913 · Non-medicated skin care preparations</span>.</p>
+      <p style="font-size:14.5px;margin-top:11px;opacity:.82"><b>Fora da tabela:</b> advogado de propriedade intelectual. Não é taxa de governo e varia muito — a faixa de mercado para depósito costuma ficar entre US$ 500 e US$ 1.500 por categoria. É estimativa, não número oficial. Vale o custo: erro na descrição do produto volta como exigência e atrasa meses.</p>
+      <p style="font-size:14.5px;margin-top:11px;opacity:.82"><b>Se demorar a vender:</b> o pedido por intenção de uso dá 6 meses após a aprovação para comprovar venda, prorrogáveis de 6 em 6 até 3 anos. Cada prorrogação custa US$ 125 por categoria, US$ 250 pelas duas.</p>
+    </div>
+
+    <div class="c" style="border-left:2px solid var(--copper);margin-top:26px">
+      <div class="n">Estado da disponibilidade · consultado em 6 de outubro de 2026</div>
+      <p style="font-size:14.5px"><b>Sunbiz, nome de entidade — livre.</b> A lista alfabética passa de LYVEN TRAVEL INC direto para os seguintes, sem nenhuma LYVENA.<br>
+      <b>Sunbiz, marca estadual da Flórida — livre.</b> Nada entre LYVENA e LYVWELL COMMUNITIES.<br>
+      <b>USPTO, marca federal — raio fonético vazio.</b> LYVENA, LIVENA, LEVENA e LYVINA retornam zero nas duas categorias que a empresa vai usar, suplemento e cosmético.</p>
+      <p style="font-size:14.5px;margin-top:11px"><b>Os três são testes diferentes, e é por isso que ter os três importa.</b> Abrir a LLC na Flórida garante o nome da empresa naquele estado e <b>não dá nenhum direito de marca</b>. O registro federal é o que impede um concorrente de usar o nome no país inteiro — e é o único que vale quando a marca começar a funcionar e aparecerem cópias.</p>
+    </div>
+
+    <div class="c" style="border-left:2px solid var(--copper);margin-top:18px">
+      <div class="n">O que é “categoria” num registro de marca</div>
+      <p style="font-size:14.5px">A categoria é <b>do produto, não da marca</b>. Uma marca nunca é registrada em geral — é registrada <b>para vender coisas específicas</b>. Os escritórios de marca do mundo dividem tudo o que existe em 45 categorias numeradas, e no pedido você declara em quais vai atuar. A exclusividade vale <b>só dentro do que foi declarado</b>.</p>
+      <p style="font-size:14.5px;margin-top:11px">É por isso que existem duas marcas <b>Dove</b> nos Estados Unidos, de donos diferentes: o sabonete da Unilever está em cosmético, o chocolate da Mars está em alimentos. Mesma palavra, categorias diferentes, nenhuma conflita com a outra.</p>
+      <div class="g g2" style="margin-top:14px">
+        <div class="c"><div class="n">Categoria 005</div><div class="t">Suplemento</div><p>Farmacêutico e suplemento alimentar. É onde ficam as cápsulas do protocolo.</p></div>
+        <div class="c"><div class="n">Categoria 003</div><div class="t">Cosmético</div><p>Cosmético e cuidado da pele. É onde fica a linha GLOW, da fase 4.</p></div>
+      </div>
+      <p style="font-size:14.5px;margin-top:14px"><b>A consequência prática.</b> Registrando só suplemento, a categoria de cosmético fica aberta: qualquer um pode registrar LYVENA para skincare, e não conseguimos impedir. Pior — quando chegar a fase 4, <b>nós</b> é que teríamos que renomear a nossa própria linha. A taxa é por categoria, então depositar as duas custa mais hoje. É o preço de não perder metade do plano depois.</p>
+      <p style="font-size:14.5px;margin-top:11px;opacity:.82">Duas vizinhas ativas na Flórida que não bloqueiam, mas vale conhecer: <b>LYVIA WELLNESS SOLUTIONS LLC</b> e <b>LYVE RESTORED WELLNESS, LLC</b>. São nomes de entidade, não marcas registradas.</p>
+    </div>
+
+  </div>
+</section>
+
+<footer><div class="in">
+  LYVENA™ · Supplements LLC · outubro de 2026 · documento para os sócios<br>
+  Marca ainda não registrada — usar ™ até a concessão.
+</div></footer>
+
+<script>
+var PAL=[
+ ['Natural Green','#103F35','Primária · 30%'],
+ ['Off White','#F6F5F2','Base · 45%'],
+ ['Beige','#E7D9CC','Base · 15%'],
+ ['Terracotta','#B76545','Acento · 10%'],
+ ['Sage Green','#8AA793','Apoio'],
+ ['Ink','#0E1A15','Texto']
+];
+document.getElementById('pal').innerHTML='<div class="pal">'+PAL.map(function(c){
+  return '<div class="sw"><div class="k" style="background:'+c[1]+'"></div><div class="b">'
+    +'<div class="nm">'+c[0]+'</div><div class="hx">'+c[1]+'</div><div class="fn">'+c[2]+'</div></div></div>';
+}).join('')+'</div>';
+
+var SHOTS=[
+ ['assets/marca/pack-1.jpg','Embalagem · estudo',1500,1000],
+ ['assets/marca/papelaria.jpg','Papelaria · estudo',1500,1000]
+];
+document.getElementById('gal').innerHTML='<div class="g g2">'+SHOTS.map(function(s){
+  return '<div class="shot"><img src="'+s[0]+'" alt="'+s[1]+'" width="'+s[2]+'" height="'+s[3]+'" loading="lazy">'
+    +'<div class="cap">'+s[1]+'</div></div>';
+}).join('')+'</div>';
+</script>
+</body></html>
