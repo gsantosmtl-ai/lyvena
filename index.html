@@ -15,7 +15,7 @@
   --sans:'Montserrat','Helvetica Neue',Arial,sans-serif;
   --gut:clamp(20px,4.6vw,62px);
   --edge:max(var(--gut),calc((100vw - 1400px) / 2));
-  --hdr:64px;
+  --hdr:72px;
 }
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
@@ -55,13 +55,14 @@ p:last-child{margin-bottom:0}
 header{position:sticky;top:0;z-index:60;background:rgba(246,245,242,.93);backdrop-filter:saturate(140%) blur(9px);border-bottom:1px solid var(--line)}
 .hin{height:var(--hdr);padding-inline:var(--edge);display:flex;align-items:center;gap:clamp(14px,3vw,40px)}
 .hin .brand{flex:none;display:block}
-.hin .brand img{height:clamp(30px,3.2vw,38px);width:auto}
+.hin .brand img{height:clamp(34px,3.7vw,46px);width:auto}
 nav.main{flex:1;display:flex;justify-content:center;gap:clamp(12px,2.2vw,34px);overflow-x:auto;scrollbar-width:none}
 nav.main::-webkit-scrollbar{display:none}
 nav.main a{font-family:var(--sans);font-size:9.5px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-s);text-decoration:none;white-space:nowrap;padding:6px 0;border-bottom:1px solid transparent;transition:color .2s,border-color .2s}
 nav.main a:hover{color:var(--green);border-bottom-color:var(--terra)}
 .pill{flex:none;font-family:var(--sans);font-size:9px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--off);background:var(--green);border-radius:999px;padding:9px 17px;white-space:nowrap}
-@media (max-width:900px){nav.main{display:none}}
+@media (max-width:1120px){nav.main{display:none}}
+@media (max-width:1120px){.hin{justify-content:space-between}}
 
 /* ===== sistema de painéis ===== */
 .sec{position:relative}
@@ -82,6 +83,8 @@ nav.main a:hover{color:var(--green);border-bottom-color:var(--terra)}
   radial-gradient(120% 90% at 70% 20%, rgba(16,63,53,.06), transparent 60%),
   linear-gradient(180deg, rgba(16,63,53,.05), rgba(16,63,53,.12))}
 .ph.noimg::after{background:none}
+.ph.fit{background-size:contain;background-repeat:no-repeat;background-color:var(--beige)}
+.ph.fit::after{background:none}
 .ph.noimg{background-image:
   radial-gradient(90% 70% at 72% 24%, rgba(255,255,255,.5), transparent 62%),
   linear-gradient(152deg, var(--p1,#E9DED1) 0%, var(--p2,#D6C7B6) 54%, var(--p3,#C9BCAC) 100%)}
@@ -93,7 +96,13 @@ nav.main a:hover{color:var(--green);border-bottom-color:var(--terra)}
   linear-gradient(152deg,#17483C 0%,#103F35 56%,#0B2E27 100%)}
 .ph.dk .sy{opacity:.2}
 
-/* faixa de palavras vertical (hero direito, como na referência) */
+.herogrid{display:grid}
+@media (min-width:980px){.herogrid{grid-template-columns:55fr 45fr}}
+@media (min-width:1180px){.herogrid{grid-template-columns:52fr 40fr 8fr}}
+.keyscol{display:none}
+@media (min-width:1180px){.keyscol{display:flex;align-items:center;justify-content:flex-end;padding-right:var(--edge)}}
+.keys{font-family:var(--sans);font-size:9.5px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--sage);line-height:2.7;text-align:right;white-space:nowrap}
+/* faixa de palavras vertical (legado) */
 .vkeys{position:absolute;right:var(--gut);top:50%;transform:translateY(-50%);z-index:3;text-align:right;
   font-family:var(--sans);font-size:9.5px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;
   color:rgba(22,34,28,.5);line-height:2.5}
@@ -129,7 +138,7 @@ nav.main a:hover{color:var(--green);border-bottom-color:var(--terra)}
 /* ===== ícones ===== */
 .ico{width:38px;height:38px;border-radius:50%;background:var(--terra);display:grid;place-items:center;flex:none}
 .ico svg{width:17px;height:17px;stroke:var(--off);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
-.ico.lt{background:rgba(183,101,69,.13)} .ico.lt svg{stroke:var(--terra)}
+.ico.lt{background:rgba(183,101,69,.17)} .ico.lt svg{stroke:var(--terra);stroke-width:1.6}
 .ico.gr{background:rgba(138,167,147,.2)} .ico.gr svg{stroke:var(--sage)}
 .ico.sm{width:30px;height:30px} .ico.sm svg{width:14px;height:14px}
 </style></head><body>
@@ -239,7 +248,7 @@ nav.main a:hover{color:var(--green);border-bottom-color:var(--terra)}
 
 <!-- ===== HERO ===== -->
 <section class="sec" id="top">
-  <div class="sp" style="--a:55fr;--b:45fr">
+  <div class="herogrid">
     <div class="pane-c pl">
       <div class="w">
         <h1 class="rv">Better health<br>is built over time.</h1>
@@ -259,10 +268,10 @@ nav.main a:hover{color:var(--green);border-bottom-color:var(--terra)}
         </div>
       </div>
     </div>
-    <div class="pane-i" style="min-height:clamp(340px,46vw,680px)">
-      <div class="ph" style="--img:url('assets/hero.jpg');--pos:28% center"></div>
-      <div class="vkeys lt">Wellness<br>Science<br>Balance<br>Longevity</div>
+    <div class="pane-i" style="min-height:clamp(340px,44vw,660px)">
+      <div class="ph" style="--img:url('assets/hero.jpg');--pos:34% 20%"></div>
     </div>
+    <div class="keyscol"><div class="keys">Wellness<br>Science<br>Balance<br>Longevity</div></div>
   </div>
 </section>
 
@@ -324,7 +333,7 @@ nav.main a:hover{color:var(--green);border-bottom-color:var(--terra)}
       <p class="pull rv" style="max-width:16ch"><span class="q2">Not another<br>supplement<br>catalog.</span><br><br>A health system<br>people can<br>actually follow.</p>
     </div>
     <div class="pane-i" style="min-height:clamp(280px,30vw,460px)">
-      <div class="ph" style="--img:url('assets/pack.jpg');--pos:center 42%"></div>
+      <div class="ph fit" style="--img:url('assets/pack.jpg');--pos:center center"></div>
     </div>
   </div>
 </section>
