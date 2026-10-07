@@ -1,420 +1,684 @@
-<!doctype html><html lang="pt-BR"><head>
+<!doctype html><html lang="en"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>LYVENA — Marca</title>
+<title>Lyvena Health — Progress, quietly.</title>
+<meta name="description" content="Lyvena Health is a wellness and supplementation brand built around structured protocols, transparent formulations and long-term continuity.">
+<link rel="icon" href="assets/favicon.png" type="image/png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Archivo:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Montserrat:wght@300;400;500;600&display=swap">
 <style>
 :root{
-  --cypress:#103F35; --bone:#F6F5F2; --sand:#E7D9CC;
-  --copper:#B76545; --sage:#8AA793; --ink:#0E1A15; --mist:#DDD6CC;
-  --cypress-soft:#1A5245;
+  --green:#103F35; --sage:#8AA793; --terra:#B76545;
+  --beige:#E7D9CC; --off:#F6F5F2; --copper:#C08A62;
+  --ink:#0E1A15; --line:#DED7CD;
+  --serif:'Playfair Display',Georgia,serif;
+  --sans:'Montserrat','Helvetica Neue',Arial,sans-serif;
 }
 *{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:var(--bone);color:var(--ink);font-family:'Archivo',Helvetica,Arial,sans-serif;font-size:16px;line-height:1.62;-webkit-font-smoothing:antialiased}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
-.band{padding:clamp(56px,9vw,112px) 0}
-.band.dark{background:var(--cypress);color:var(--bone)}
-.band.sand{background:var(--sand)}
-.in{max-width:1080px;margin:0 auto;padding-inline:clamp(18px,4vw,34px)}
-.in.narrow{max-width:760px}
-.kick{font-family:'JetBrains Mono',ui-monospace,monospace;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--copper);margin:0 0 18px}
-.dark .kick{color:var(--sage)}
-h1{font-family:'Instrument Serif',Georgia,serif;font-weight:400;font-size:clamp(2.6rem,8vw,5.2rem);line-height:1.02;margin:0;letter-spacing:.01em}
-h2{font-family:'Instrument Serif',Georgia,serif;font-weight:400;font-size:clamp(1.9rem,4.4vw,3rem);line-height:1.12;margin:0 0 20px;letter-spacing:-.005em;text-wrap:balance}
-h3{font-family:'JetBrains Mono',ui-monospace,monospace;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--copper);margin:48px 0 16px;font-weight:500}
-.dark h3{color:var(--sage)}
-p{margin:0 0 18px;max-width:64ch}
-.big{font-family:'Instrument Serif',Georgia,serif;font-size:clamp(1.5rem,3.4vw,2.3rem);line-height:1.26;max-width:22ch;margin:0}
-.lede{font-size:clamp(1.02rem,1.9vw,1.2rem);line-height:1.6;max-width:58ch;color:var(--cypress)}
-.dark .lede{color:var(--sand)}
-.sm{font-size:14px;line-height:1.6}
-.mono{font-family:'JetBrains Mono',ui-monospace,monospace}
-em.hl{font-style:normal;color:var(--copper)}
-.dark em.hl{color:var(--sage)}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--off);color:var(--ink);font-family:var(--sans);font-weight:400;font-size:16.5px;line-height:1.75;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block;height:auto}
 
-/* capa */
-.cover{background:var(--bone);color:var(--ink);min-height:92vh;display:flex;flex-direction:column;justify-content:center;position:relative;overflow:hidden}
-.cover .in{position:relative;z-index:2}
-.clogo{display:block;width:100%;max-width:min(660px,86vw);height:auto;margin:6px 0 0 -3%}
-.cp{font-family:'JetBrains Mono',ui-monospace,monospace;font-size:clamp(10px,1.5vw,12px);letter-spacing:.34em;text-transform:uppercase;color:var(--cypress);opacity:.62;margin:14px 0 0}
-.ct2{font-family:'Instrument Serif',Georgia,serif;font-style:italic;font-size:clamp(1.2rem,2.8vw,1.75rem);color:var(--cypress);margin:26px 0 0}
-.cmeta{margin-top:50px;padding-top:22px;border-top:1px solid var(--mist);font-family:'JetBrains Mono',ui-monospace,monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--cypress);opacity:.6;display:flex;flex-wrap:wrap;gap:8px 28px}
-.cover .kick{color:var(--copper)}
-/* canal decorativo da capa */
-.cline{position:absolute;left:clamp(18px,4vw,34px);top:0;bottom:0;width:1px;background:var(--sage);opacity:.5;z-index:1}
-.cdot{position:absolute;left:calc(clamp(18px,4vw,34px) - 3px);top:62%;width:7px;height:7px;border-radius:50%;background:var(--copper);z-index:1}
-@media (max-width:620px){.clogo{margin-left:0}}
+/* ---------- estrutura ---------- */
+.s{padding:clamp(76px,11vw,172px) 0;position:relative;overflow:hidden}
+.in{width:100%;max-width:1160px;margin:0 auto;padding-inline:clamp(22px,5vw,56px)}
+.col{max-width:66ch}
+.col-n{max-width:58ch}
+.on-green{background:var(--green);color:var(--off)}
+.on-beige{background:var(--beige)}
+.on-sage{background:#DCE4DC}
 
-/* grid */
-.g{display:grid;gap:clamp(16px,2.4vw,26px)}
-.g2{grid-template-columns:repeat(auto-fit,minmax(282px,1fr))}
-.g3{grid-template-columns:repeat(auto-fit,minmax(222px,1fr))}
-.g4{grid-template-columns:repeat(auto-fit,minmax(176px,1fr))}
+/* ---------- tipografia ---------- */
+.lbl{font-family:var(--sans);font-size:10px;font-weight:600;letter-spacing:.26em;text-transform:uppercase;color:var(--terra);margin:0 0 clamp(22px,3vw,38px)}
+.on-green .lbl{color:var(--sage)}
+h1,h2,h3{font-family:var(--serif);font-weight:400;margin:0;letter-spacing:-.012em;text-wrap:balance}
+h1{font-size:clamp(2.5rem,7vw,5rem);line-height:1.04}
+h2{font-size:clamp(2rem,5.2vw,3.7rem);line-height:1.08}
+h3{font-size:clamp(1.35rem,2.7vw,1.95rem);line-height:1.2}
+.sub{font-family:var(--sans);font-weight:300;font-size:clamp(1.02rem,1.9vw,1.3rem);line-height:1.6;letter-spacing:.005em;margin:clamp(26px,3.4vw,40px) 0 0;max-width:40ch}
+.on-green .sub{color:var(--beige)}
+p{margin:0 0 1.35em;max-width:66ch}
+p:last-child{margin-bottom:0}
+.body-xl{font-size:clamp(1.06rem,1.6vw,1.22rem);line-height:1.72}
+.quiet{color:#4A5A52}
+.on-green .quiet{color:var(--sage)}
 
-/* bloco de declaração */
-.decl{border-left:2px solid var(--copper);padding-left:clamp(18px,3vw,26px);margin:0 0 34px;max-width:54ch}
-.dark .decl{border-left-color:var(--sage)}
-.decl .l{font-family:'JetBrains Mono',ui-monospace,monospace;font-size:9.5px;letter-spacing:.17em;text-transform:uppercase;color:var(--copper);margin-bottom:10px}
-.dark .decl .l{color:var(--sage)}
-.decl .e{font-family:'Instrument Serif',Georgia,serif;font-style:italic;font-size:clamp(1.25rem,2.6vw,1.6rem);line-height:1.3;display:block;margin-bottom:9px}
-.decl .p{font-size:14.5px;line-height:1.58;opacity:.85}
+/* frase institucional grande */
+.pull{font-family:var(--serif);font-size:clamp(1.75rem,4.4vw,3.1rem);line-height:1.12;letter-spacing:-.015em;margin:clamp(42px,6vw,76px) 0;max-width:26ch}
+.pull em{font-style:normal;color:var(--terra)}
+.on-green .pull em{color:var(--sage)}
+.pull.sm{font-size:clamp(1.45rem,3.2vw,2.3rem);max-width:30ch}
+.sig{font-family:var(--serif);font-style:italic;font-size:clamp(1.3rem,2.6vw,1.85rem);color:var(--green)}
+.on-green .sig{color:var(--beige)}
 
-/* card */
-.c{background:rgba(255,255,255,.55);border:1px solid var(--mist);padding:clamp(18px,2.4vw,24px)}
-.sand .c{background:rgba(255,255,255,.5)}
-.dark .c{background:rgba(245,239,231,.06);border-color:rgba(245,239,231,.16)}
-.c .n{font-family:'JetBrains Mono',ui-monospace,monospace;font-size:9.5px;letter-spacing:.15em;text-transform:uppercase;color:var(--copper);margin-bottom:11px}
-.dark .c .n{color:var(--sage)}
-.c .t{font-family:'Instrument Serif',Georgia,serif;font-size:1.32rem;line-height:1.18;margin-bottom:9px}
-.c p{font-size:14px;line-height:1.56;margin:0;max-width:none;opacity:.88}
+/* régua fina */
+.rule{height:1px;background:var(--line);border:0;margin:clamp(40px,6vw,72px) 0}
+.on-green .rule{background:rgba(246,245,242,.18)}
 
-/* valor */
-.v{border-top:1px solid var(--mist);padding:26px 0;display:grid;grid-template-columns:minmax(0,1fr);gap:10px}
-.dark .v{border-top-color:rgba(245,239,231,.18)}
-.v:last-of-type{border-bottom:1px solid var(--mist)}
-.dark .v:last-of-type{border-bottom-color:rgba(245,239,231,.18)}
-.v .vn{font-family:'Instrument Serif',Georgia,serif;font-size:clamp(1.3rem,2.6vw,1.7rem);line-height:1.15}
-.v .vd{font-size:14.5px;line-height:1.6;max-width:62ch;margin:0;opacity:.9}
-.v .vx{font-size:13px;line-height:1.55;max-width:58ch;margin:0;padding-left:14px;border-left:2px solid var(--copper);opacity:.78}
-@media (min-width:760px){.v{grid-template-columns:260px minmax(0,1fr);gap:8px 32px}.v .vn{grid-row:span 2}}
+/* ---------- tradução expansível ---------- */
+.pt{margin-top:clamp(30px,4vw,46px)}
+.pt-t{appearance:none;background:none;border:0;padding:8px 0;cursor:pointer;display:inline-flex;align-items:center;gap:9px;
+  font-family:var(--sans);font-size:10.5px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--terra);
+  border-bottom:1px solid rgba(183,101,69,.3);transition:border-color .25s,color .25s}
+.pt-t:hover{color:var(--green);border-bottom-color:var(--green)}
+.on-green .pt-t{color:var(--sage);border-bottom-color:rgba(138,167,147,.35)}
+.on-green .pt-t:hover{color:var(--off);border-bottom-color:var(--off)}
+.pt-t .ar{font-size:12px;transition:transform .35s ease;line-height:1}
+.pt[data-open="true"] .pt-t .ar{transform:rotate(180deg)}
+.pt-w{display:grid;grid-template-rows:0fr;opacity:0;transition:grid-template-rows .5s cubic-bezier(.33,1,.68,1),opacity .35s ease}
+.pt[data-open="true"] .pt-w{grid-template-rows:1fr;opacity:1}
+.pt-c{overflow:hidden}
+.pt-i{margin-top:22px;padding:4px 0 4px 22px;border-left:1px solid var(--line);
+  font-size:14.5px;line-height:1.78;color:#51615A;max-width:62ch}
+.on-green .pt-i{border-left-color:rgba(246,245,242,.2);color:var(--sage)}
+.pt-i p{margin-bottom:1.1em;max-width:none}
+.pt-i strong{color:var(--green);font-weight:600}
+.on-green .pt-i strong{color:var(--beige)}
+.pt-i .t{font-family:var(--serif);font-size:1.22rem;line-height:1.26;color:var(--green);margin-bottom:.7em;display:block}
+.on-green .pt-i .t{color:var(--beige)}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .pt-w{transition:none}.pt-t .ar{transition:none}
+  .rv{opacity:1!important;transform:none!important}
+}
 
-/* paleta */
-.pal{display:grid;grid-template-columns:repeat(auto-fit,minmax(132px,1fr));gap:0;border:1px solid var(--mist);margin:8px 0 0}
-.dark .pal{border-color:rgba(245,239,231,.18)}
-.sw{border-right:1px solid var(--mist)}
-.dark .sw{border-right-color:rgba(245,239,231,.18)}
-.sw:last-child{border-right:none}
-.sw .k{height:clamp(92px,13vw,136px)}
-.sw .b{padding:13px 14px;background:var(--bone)}
-.dark .sw .b{background:transparent}
-.sw .nm{font-size:13px;font-weight:600;line-height:1.2}
-.sw .hx{font-family:'JetBrains Mono',ui-monospace,monospace;font-size:10px;letter-spacing:.04em;opacity:.6;margin-top:3px}
-.sw .fn{font-family:'JetBrains Mono',ui-monospace,monospace;font-size:8.5px;letter-spacing:.11em;text-transform:uppercase;color:var(--copper);margin-top:9px}
-@media (max-width:520px){.sw{border-right:none;border-bottom:1px solid var(--mist)}}
+/* ---------- reveal no scroll ---------- */
+.rv{opacity:0;transform:translateY(22px);transition:opacity .85s cubic-bezier(.22,1,.36,1),transform .85s cubic-bezier(.22,1,.36,1)}
+.rv.in-v{opacity:1;transform:none}
 
-/* imagem */
-.shot{background:rgba(255,255,255,.5);border:1px solid var(--mist);overflow:hidden}
-.dark .shot{background:rgba(245,239,231,.05);border-color:rgba(245,239,231,.16)}
-.shot img{display:block;width:100%;height:auto}
-.shot .cap{padding:11px 14px;font-family:'JetBrains Mono',ui-monospace,monospace;font-size:9.5px;letter-spacing:.11em;text-transform:uppercase;opacity:.6;border-top:1px solid var(--mist)}
-.dark .shot .cap{border-top-color:rgba(245,239,231,.16)}
-.ph{display:flex;align-items:center;justify-content:center;min-height:168px;padding:22px;text-align:center;font-family:'JetBrains Mono',ui-monospace,monospace;font-size:10px;letter-spacing:.13em;text-transform:uppercase;color:var(--sage);background:repeating-linear-gradient(135deg,transparent,transparent 9px,rgba(168,178,154,.13) 9px,rgba(168,178,154,.13) 10px)}
+/* ---------- símbolo decorativo ---------- */
+.wm{position:absolute;pointer-events:none;user-select:none;opacity:.055;width:clamp(230px,32vw,440px);right:-5%;top:50%;transform:translateY(-50%)}
+.on-green .wm{opacity:.08}
+.sym-div{display:flex;align-items:center;gap:20px;margin:clamp(44px,6vw,76px) 0}
+.sym-div::before,.sym-div::after{content:"";flex:1;height:1px;background:var(--line)}
+.on-green .sym-div::before,.on-green .sym-div::after{background:rgba(246,245,242,.18)}
+.sym-div img{width:17px;opacity:.55;flex:none}
 
-/* lista */
-ul.ls{list-style:none;padding:0;margin:18px 0}
-ul.ls li{position:relative;padding:11px 0 11px 22px;border-bottom:1px solid var(--mist);font-size:14.5px;line-height:1.56}
-.dark ul.ls li{border-bottom-color:rgba(245,239,231,.16)}
-ul.ls li:last-child{border-bottom:none}
-ul.ls li::before{content:"";position:absolute;left:0;top:1.3em;width:5px;height:5px;background:var(--copper);border-radius:50%}
-.dark ul.ls li::before{background:var(--sage)}
-ol.ns{list-style:none;counter-reset:n;padding:0;margin:18px 0}
-ol.ns li{counter-increment:n;position:relative;padding:14px 0 14px 42px;border-bottom:1px solid var(--mist);font-size:15px;line-height:1.56}
-.dark ol.ns li{border-bottom-color:rgba(245,239,231,.16)}
-ol.ns li:last-child{border-bottom:none}
-ol.ns li::before{content:"0" counter(n);position:absolute;left:0;top:15px;font-family:'JetBrains Mono',ui-monospace,monospace;font-size:11px;letter-spacing:.08em;color:var(--copper)}
-.dark ol.ns li::before{color:var(--sage)}
+/* ---------- hero ---------- */
+.hero{min-height:100svh;display:flex;align-items:center;background:var(--off);padding-block:clamp(60px,9vw,110px);position:relative}
+.hero .logo{width:100%;max-width:min(430px,70vw);margin:0 0 clamp(46px,6.5vw,78px)}
+.hero-line{position:absolute;left:0;top:0;bottom:0;width:1px;background:linear-gradient(to bottom,transparent,var(--sage) 22%,var(--sage) 78%,transparent);opacity:.4;margin-left:clamp(22px,5vw,56px)}
+.hero .in{position:relative;z-index:2}
+.scroll-cue{position:absolute;bottom:clamp(26px,4vw,46px);font-family:var(--sans);font-size:9.5px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--sage)}
 
-/* dois lados */
-.vs{display:grid;grid-template-columns:repeat(auto-fit,minmax(272px,1fr));border:1px solid var(--mist);margin:24px 0}
-.dark .vs{border-color:rgba(245,239,231,.18)}
-.vs>div{padding:20px 22px}
-.vs>div+div{border-left:1px solid var(--mist)}
-.dark .vs>div+div{border-left-color:rgba(245,239,231,.18)}
-.vs .h{font-family:'JetBrains Mono',ui-monospace,monospace;font-size:9.5px;letter-spacing:.15em;text-transform:uppercase;margin-bottom:13px}
-.vs .no .h{color:var(--copper)} .vs .si .h{color:var(--cypress)}
-.dark .vs .si .h{color:var(--sage)}
-.vs ul{margin:0;padding-left:18px} .vs li{font-size:13.5px;line-height:1.5;margin-bottom:8px;opacity:.9}
-@media (max-width:620px){.vs>div+div{border-left:none;border-top:1px solid var(--mist)}}
+/* ---------- blocos editoriais PMV ---------- */
+.pmv{border-top:1px solid var(--line);padding:clamp(34px,5vw,56px) 0;display:grid;gap:clamp(14px,3vw,48px)}
+.pmv:last-of-type{border-bottom:1px solid var(--line)}
+.on-green .pmv{border-top-color:rgba(246,245,242,.18)}
+.on-green .pmv:last-of-type{border-bottom-color:rgba(246,245,242,.18)}
+.pmv .k{font-family:var(--sans);font-size:10px;font-weight:600;letter-spacing:.26em;text-transform:uppercase;color:var(--terra);padding-top:.7em}
+.on-green .pmv .k{color:var(--sage)}
+.pmv .v{font-family:var(--serif);font-size:clamp(1.35rem,2.9vw,2.15rem);line-height:1.22;max-width:30ch}
+@media (min-width:860px){.pmv{grid-template-columns:200px minmax(0,1fr)}}
 
-/* números */
-.nums{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1px;background:var(--mist);border:1px solid var(--mist);margin:28px 0 0}
-.dark .nums{background:rgba(245,239,231,.18);border-color:rgba(245,239,231,.18)}
-.nums>div{background:var(--bone);padding:17px 18px}
-.sand .nums>div{background:var(--sand)}
-.dark .nums>div{background:var(--cypress)}
-.nums .l{font-family:'JetBrains Mono',ui-monospace,monospace;font-size:9px;letter-spacing:.13em;text-transform:uppercase;opacity:.55;margin-bottom:7px}
-.nums .vv{font-family:'Instrument Serif',Georgia,serif;font-size:1.6rem;line-height:1.05}
-.nums .s{font-size:11.5px;line-height:1.4;opacity:.65;margin-top:5px}
+/* ---------- itens numerados ---------- */
+.num{border-top:1px solid var(--line);padding:clamp(30px,4.5vw,50px) 0;display:grid;gap:12px clamp(28px,4vw,56px)}
+.num:last-of-type{border-bottom:1px solid var(--line)}
+.on-green .num{border-top-color:rgba(246,245,242,.18)}
+.on-green .num:last-of-type{border-bottom-color:rgba(246,245,242,.18)}
+.num .n{font-family:var(--serif);font-size:clamp(1.9rem,4vw,2.9rem);line-height:1;color:var(--sage)}
+.num .h{font-family:var(--sans);font-size:11.5px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--green);margin-bottom:14px}
+.on-green .num .h{color:var(--beige)}
+.num .d{font-size:15.5px;line-height:1.72;color:#4A5A52;max-width:48ch}
+.on-green .num .d{color:var(--sage)}
+.num .d b{color:var(--green);font-weight:600}
+.on-green .num .d b{color:var(--off)}
+@media (min-width:760px){.num{grid-template-columns:86px minmax(0,1fr)}}
+</style></head><body>
+<style>
+/* ---------- diagrama de fases ---------- */
+.phases{margin:clamp(40px,6vw,70px) 0}
+.ph-top{display:flex;flex-wrap:wrap;align-items:baseline;gap:clamp(16px,4vw,54px);margin-bottom:clamp(34px,5vw,56px)}
+.ph-big{font-family:var(--serif);font-size:clamp(2.6rem,7.5vw,5.2rem);line-height:.95;color:var(--off)}
+.ph-big span{display:block;font-family:var(--sans);font-size:10px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--sage);margin-top:14px}
+.ph-grid{display:grid;gap:1px;background:rgba(246,245,242,.18);border-top:1px solid rgba(246,245,242,.18);border-bottom:1px solid rgba(246,245,242,.18)}
+.ph-cell{background:var(--green);padding:clamp(22px,3vw,34px) clamp(18px,2.4vw,28px);position:relative}
+.ph-cell .pn{font-family:var(--sans);font-size:9.5px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--sage);margin-bottom:16px}
+.ph-cell .pt2{font-family:var(--serif);font-size:clamp(1.3rem,2.6vw,1.8rem);line-height:1.1;color:var(--off);margin-bottom:12px}
+.ph-cell .pd{font-size:13.5px;line-height:1.65;color:var(--sage);max-width:30ch}
+.ph-dot{position:absolute;top:0;left:clamp(18px,2.4vw,28px);width:7px;height:7px;border-radius:50%;background:var(--terra);transform:translateY(-50%)}
+@media (min-width:820px){.ph-grid{grid-template-columns:repeat(4,1fr)}}
 
-/* nav */
-.tn{position:sticky;top:0;z-index:30;background:rgba(245,239,231,.93);backdrop-filter:blur(8px);border-bottom:1px solid var(--mist)}
-.tnin{max-width:1080px;margin:0 auto;padding:0 clamp(18px,4vw,34px);display:flex;gap:2px;overflow-x:auto;scrollbar-width:none}
-.tnin::-webkit-scrollbar{display:none}
-.tn a{font-family:'JetBrains Mono',ui-monospace,monospace;font-size:10px;letter-spacing:.11em;text-transform:uppercase;color:var(--cypress);opacity:.62;text-decoration:none;padding:14px 11px;white-space:nowrap;border-bottom:2px solid transparent}
-.tn a:hover{opacity:1;border-bottom-color:var(--copper)}
-.tn .brand{font-family:'Instrument Serif',Georgia,serif;font-size:15px;letter-spacing:.17em;opacity:1;padding-right:18px;text-transform:none}
+/* ---------- fluxo editorial (growth) ---------- */
+.flow{margin:clamp(40px,6vw,72px) 0;position:relative}
+.flow-i{position:relative;padding:clamp(26px,3.6vw,42px) 0 clamp(26px,3.6vw,42px) clamp(42px,6vw,76px);border-top:1px solid var(--line)}
+.flow-i:last-child{border-bottom:1px solid var(--line)}
+.on-green .flow-i{border-top-color:rgba(246,245,242,.18)}
+.on-green .flow-i:last-child{border-bottom-color:rgba(246,245,242,.18)}
+.flow-i::before{content:"";position:absolute;left:clamp(10px,1.6vw,20px);top:0;bottom:0;width:1px;background:var(--line)}
+.on-green .flow-i::before{background:rgba(246,245,242,.2)}
+.flow-i:first-child::before{top:50%}
+.flow-i:last-child::before{bottom:50%}
+.flow-i::after{content:"";position:absolute;left:calc(clamp(10px,1.6vw,20px) - 4px);top:50%;width:9px;height:9px;border-radius:50%;background:var(--terra);transform:translateY(-50%)}
+.flow-k{font-family:var(--sans);font-size:11px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--green);margin-bottom:10px}
+.on-green .flow-k{color:var(--beige)}
+.flow-m{font-family:var(--serif);font-size:clamp(1.18rem,2.3vw,1.6rem);line-height:1.22;margin-bottom:12px}
+.flow-d{font-size:15px;line-height:1.7;color:#4A5A52;max-width:54ch}
+.on-green .flow-d{color:var(--sage)}
 
-.vp{border:1px solid var(--mist);margin:12px 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(252px,1fr))}
-.vp>div{padding:15px 17px;font-size:13.5px;line-height:1.55}
-.vp>div+div{border-left:1px solid var(--mist)}
-.vp .vt{font-family:'JetBrains Mono',ui-monospace,monospace;font-size:9px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:8px}
-.vp .bad{background:rgba(183,101,69,.07)} .vp .bad .vt{color:var(--copper)} .vp .bad i{color:var(--copper);font-style:normal}
-.vp .good{background:rgba(138,167,147,.14)} .vp .good .vt{color:var(--cypress)}
-@media (max-width:640px){.vp>div+div{border-left:none;border-top:1px solid var(--mist)}}
-.chk{list-style:none;padding:0;margin:18px 0}
-.chk li{position:relative;padding:11px 0 11px 30px;border-bottom:1px solid var(--mist);font-size:14.5px;line-height:1.55}
-.chk li:last-child{border-bottom:none}
-.chk li::before{content:"";position:absolute;left:0;top:14px;width:13px;height:13px;border:1px solid var(--sage);border-radius:2px}
-footer{background:var(--cypress);color:var(--sage);padding:46px 0 56px;font-family:'JetBrains Mono',ui-monospace,monospace;font-size:10px;letter-spacing:.09em;line-height:2}
-footer a{color:var(--sand)}
+/* ---------- jornada ---------- */
+.jrn{display:flex;flex-wrap:wrap;align-items:center;gap:clamp(10px,2vw,22px);margin:clamp(36px,5vw,64px) 0}
+.jrn-s{font-family:var(--sans);font-size:clamp(10px,1.3vw,12px);font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--green);
+  padding-bottom:9px;border-bottom:1px solid var(--terra);white-space:nowrap}
+.on-green .jrn-s{color:var(--beige);border-bottom-color:var(--sage)}
+.jrn-a{color:var(--sage);font-size:13px;flex:none}
+
+/* ---------- pilares ---------- */
+.pil{display:grid;gap:1px;background:var(--line);margin:clamp(36px,5vw,64px) 0;border:1px solid var(--line)}
+.pil>div{background:var(--off);padding:clamp(26px,3.4vw,40px)}
+.on-beige .pil>div{background:var(--beige)}
+.pil .ph3{font-family:var(--sans);font-size:10.5px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--terra);margin-bottom:18px}
+.pil .pb{font-family:var(--serif);font-size:clamp(1.15rem,2.1vw,1.45rem);line-height:1.26;margin-bottom:14px}
+.pil .pp{font-size:14.5px;line-height:1.7;color:#4A5A52}
+@media (min-width:860px){.pil{grid-template-columns:repeat(3,1fr)}}
+
+/* ---------- ecossistema ---------- */
+.eco-c{text-align:center;margin:clamp(34px,5vw,60px) 0 clamp(30px,4vw,52px);padding-bottom:clamp(26px,3.4vw,40px);position:relative}
+.eco-c::after{content:"";position:absolute;left:50%;bottom:0;width:1px;height:clamp(20px,2.6vw,30px);background:rgba(246,245,242,.3);transform:translateX(-50%)}
+.eco-c .n{font-family:var(--sans);font-size:clamp(13px,1.8vw,16px);font-weight:600;letter-spacing:.3em;text-transform:uppercase;line-height:1.4;color:var(--off)}
+.eco-c .t{font-family:var(--sans);font-size:9.5px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--sage);margin-bottom:16px}
+.eco{display:grid;gap:0 clamp(26px,4vw,56px)}
+.eco>div{padding:clamp(24px,3.2vw,36px) 0;border-top:1px solid var(--line)}
+.on-green .eco>div{border-top-color:rgba(246,245,242,.18)}
+.eco .ek{font-family:var(--sans);font-size:10.5px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--beige);margin-bottom:11px}
+.eco .ed{font-size:14.5px;line-height:1.68;color:var(--sage);max-width:34ch}
+@media (min-width:720px){.eco{grid-template-columns:repeat(2,1fr)}}
+@media (min-width:1020px){.eco{grid-template-columns:repeat(3,1fr)}}
+
+/* ---------- flywheel ---------- */
+.fw{margin:clamp(36px,5vw,64px) auto;max-width:620px}
+.fw svg{width:100%;height:auto;display:block}
+.fw-lab{font-family:var(--sans);font-size:11.5px;font-weight:600;letter-spacing:.17em;fill:#E7D9CC}
+.fw-c1{font-family:var(--serif);font-size:21px;letter-spacing:.07em;fill:#F6F5F2}
+.fw-c2{font-family:var(--serif);font-style:italic;font-size:15px;fill:#8AA793}
+.fw-m{display:none}
+.fw-m li{list-style:none;position:relative;padding:14px 0 14px 30px;border-top:1px solid rgba(246,245,242,.18);
+  font-family:var(--sans);font-size:11.5px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--beige)}
+.fw-m li:last-child{border-bottom:1px solid rgba(246,245,242,.18)}
+.fw-m li::before{content:"";position:absolute;left:0;top:50%;width:7px;height:7px;border-radius:50%;background:var(--terra);transform:translateY(-50%)}
+.fw-m li:last-child::after{content:"↻";position:absolute;right:0;top:50%;transform:translateY(-50%);color:var(--sage);font-size:15px}
+.fw-m ul{margin:0;padding:0}
+@media (max-width:640px){.fw{display:none}.fw-m{display:block}}
+
+/* ---------- imagem editorial ---------- */
+.fig{margin:clamp(40px,6vw,76px) 0}
+.fig img{width:100%}
+.fig figcaption{font-family:var(--sans);font-size:10px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--sage);margin-top:16px}
+.fig-pair{display:grid;gap:clamp(16px,2.6vw,30px)}
+@media (min-width:860px){.fig-pair{grid-template-columns:1fr 1fr;align-items:end}}
+
+/* ---------- fechamento ---------- */
+.end{min-height:76svh;display:flex;align-items:center;justify-content:center;text-align:center;background:var(--green);color:var(--off)}
+.end .logo{width:100%;max-width:min(360px,66vw);margin:0 auto clamp(42px,6vw,66px)}
+.end .pq{font-family:var(--serif);font-size:clamp(1.5rem,3.6vw,2.4rem);letter-spacing:.02em;line-height:1.1}
+.end .ss{font-family:var(--sans);font-size:10.5px;font-weight:600;letter-spacing:.3em;text-transform:uppercase;color:var(--sage);margin-top:26px}
+.end .bb{font-family:var(--serif);font-style:italic;font-size:clamp(.98rem,1.7vw,1.15rem);color:var(--beige);margin-top:clamp(34px,5vw,54px);opacity:.78}
+footer{background:var(--green);color:var(--sage);padding:0 0 clamp(34px,5vw,54px);text-align:center;
+  font-family:var(--sans);font-size:10px;font-weight:400;letter-spacing:.14em;text-transform:uppercase;line-height:2.2}
 </style>
-</head><body>
 
-<div class="cover" id="top">
-  <div class="cline"></div><div class="cdot"></div>
+<!-- ============ 01 HERO ============ -->
+<section class="s hero" id="top">
+  <div class="hero-line"></div>
   <div class="in">
-    <p class="kick">Supplements LLC · outubro 2026</p>
-    <h1 style="margin:0"><img class="clogo" src="assets/marca/logo-v2.png" alt="LYVENA Health" width="1083" height="340"></h1>
-    <p class="cp">li · ve · na &nbsp;&nbsp;|&nbsp;&nbsp; LEE-vay-nah</p>
-    <p class="ct2">Progress, quietly.</p>
-    <div class="cmeta"><span>A marca</span><span>O conceito</span><span>As aplicações</span></div>
-  </div>
-</div>
-
-<nav class="tn"><div class="tnin">
-  <a class="brand" href="#top">LYVENA</a>
-  <a href="#marca">A marca</a><a href="#conceito">O conceito</a>
-  <a href="#identidade">A identidade</a><a href="#aplicacoes">As aplicações</a><a href="#pedido">O pedido</a>
-</div></nav>
-
-<section class="band sand" id="marca">
-  <div class="in">
-    <p class="kick">01 · A marca</p>
-    <h2>O caminho por onde a vida passa</h2>
-    <p class="lede"><em class="hl">LY</em> de <i>live</i>, vida. <em class="hl">VENA</em> do latim <i>vena</i>, a veia — o canal por onde a vida corre. Três sílabas, tônica no meio, som contínuo e sem pressa.</p>
-
-    <div class="g g2" style="margin-top:30px">
-      <div>
-        <div class="decl"><div class="l">Essência</div><span class="e">Progress, quietly.</span><div class="p">Progresso, sem alarde.</div></div>
-        <div class="decl"><div class="l">Propósito</div><span class="e">Help people sustain better choices — not for a month, for a life.</span><div class="p">Ajudar as pessoas a sustentar escolhas melhores — não por um mês, por uma vida.</div></div>
-      </div>
-      <div>
-        <div class="decl"><div class="l">Missão</div><span class="e">Turn science into protocols that fit a real week, and stay with the people who start one.</span><div class="p">Transformar ciência em protocolos que cabem numa semana real, e acompanhar quem começou até o fim.</div></div>
-        <div class="decl"><div class="l">Visão</div><span class="e">Become the brand people look for after they have tried everything else.</span><div class="p">Ser a marca que as pessoas procuram depois de já terem tentado de tudo.</div></div>
-      </div>
+    <img class="logo rv" src="assets/logo.png" alt="Lyvena Health" width="900" height="435">
+    <h1 class="rv">Better health<br>is built over time.</h1>
+    <p class="sub rv">Science-backed supplementation.<br>Structured protocols.<br>Real-life consistency.</p>
+    <div class="rule rv"></div>
+    <div class="col rv">
+      <p class="body-xl">Lyvena Health is a wellness and supplementation brand built around a simple belief: meaningful progress does not come from miracle promises.</p>
+      <p class="body-xl">It comes from the right science, the right protocol, and the consistency to stay with it.</p>
+      <p class="sig" style="margin-top:2em">Progress, quietly.</p>
     </div>
+    <div class="pt rv">
+      <button class="pt-t" aria-expanded="false">Português <span class="ar">↓</span></button>
+      <div class="pt-w"><div class="pt-c"><div class="pt-i">
+        <span class="t">Uma saúde melhor é construída com o tempo.</span>
+        <p>Suplementação baseada em ciência. Protocolos estruturados. Consistência para a vida real.</p>
+        <p>A Lyvena Health é uma marca de saúde, bem-estar e suplementação construída a partir de uma crença simples: progresso significativo não vem de promessas milagrosas.</p>
+        <p>Ele vem da ciência certa, do protocolo certo e da consistência necessária para seguir em frente.</p>
+        <p><strong>Progresso, de forma consistente.</strong></p>
+      </div></div></div>
+    </div>
+  </div>
+  <div class="scroll-cue in">Scroll</div>
+</section>
 
-    <h3>Valores</h3>
-    <p class="sm" style="opacity:.78;margin-bottom:4px">Cada um vem com o que <b>proíbe</b> a empresa de fazer — é essa parte que vale sob pressão por resultado.</p>
-    <div class="g g4">
-      <div class="c"><div class="t">Evidence Over Hype</div><p>Estudo que sustente <b>a nossa dose</b>, não a substância em geral.</p></div>
-      <div class="c"><div class="t">Dose Honesty</div><p>Miligramas abertos no rótulo. <b>Nunca</b> blend proprietário.</p></div>
-      <div class="c"><div class="t">Follow-Through</div><p>A venda é o começo. Acompanhamento em cada fase, dentro do orçamento.</p></div>
-      <div class="c"><div class="t">No Miracles</div><p>Sem prazo, sem quilos, sem antes-e-depois. Vendemos método.</p></div>
+<!-- ============ 02 THE OPPORTUNITY ============ -->
+<section class="s on-beige">
+  <img class="wm" src="assets/symbol.png" alt="" aria-hidden="true">
+  <div class="in">
+    <p class="lbl rv">The Opportunity</p>
+    <h2 class="rv">People don't need<br>another bottle.<br><em style="font-style:normal;color:var(--terra)">They need a better<br>way to continue.</em></h2>
+    <div class="rule rv"></div>
+    <div class="col rv">
+      <p class="body-xl">The supplement industry is exceptionally good at helping people <em>start</em>.</p>
+      <p class="quiet" style="font-family:var(--serif);font-size:clamp(1.1rem,2.1vw,1.5rem);line-height:1.5;color:var(--green);margin:1.6em 0">A new goal.<br>A new bottle.<br>A new routine.<br>A new promise.</p>
+      <p class="body-xl">But sustainable health is not built in the first 30 days.</p>
+      <p class="body-xl">The real challenge begins when motivation fades, routines change and progress becomes less visible.</p>
+      <p class="body-xl"><strong style="font-weight:600">That is where Lyvena begins.</strong></p>
+    </div>
+    <div class="pt rv">
+      <button class="pt-t" aria-expanded="false">Português <span class="ar">↓</span></button>
+      <div class="pt-w"><div class="pt-c"><div class="pt-i">
+        <span class="t">As pessoas não precisam de mais um frasco. Elas precisam de uma maneira melhor de continuar.</span>
+        <p>A indústria de suplementos é extremamente eficiente em fazer as pessoas começarem. Um novo objetivo. Um novo frasco. Uma nova rotina. Uma nova promessa.</p>
+        <p>Mas saúde sustentável não é construída nos primeiros 30 dias.</p>
+        <p>O verdadeiro desafio começa quando a motivação diminui, a rotina muda e o progresso deixa de ser tão evidente.</p>
+        <p><strong>É exatamente aí que a Lyvena começa.</strong></p>
+      </div></div></div>
     </div>
   </div>
 </section>
 
-<section class="band dark" id="conceito">
+<!-- ============ 03 THE BRAND ============ -->
+<section class="s">
   <div class="in">
-    <p class="kick">02 · O conceito</p>
-    <p class="big">Quase ninguém desiste na semana 1.<br>Desiste na semana 5.</p>
-    <p class="lede" style="margin-top:30px">Na semana 5 o entusiasmo acabou e o resultado ainda não apareceu. É o buraco onde a categoria perde o cliente — e onde ninguém está. O público não precisa aprender a começar: já começou duas, três vezes. <b>O que falta não é produto, é sequência.</b></p>
-
-    <h3>Posicionamento</h3>
-    <p style="font-size:clamp(1.05rem,2vw,1.25rem);line-height:1.5;max-width:54ch">Para <b>mulheres que já tentaram emagrecer e pararam no meio</b>, LYVENA é o <b>protocolo de seis meses</b> que combina <b>dose aberta no rótulo com acompanhamento em cada fase</b>.</p>
-
-    <h3>O espaço que ocupamos</h3>
-    <div class="vs">
-      <div class="no"><div class="h">Onde todo mundo está</div><ul>
-        <li>Promessa agressiva com blend proprietário</li>
-        <li>Ou promessa contida com rótulo igualmente fechado</li>
-        <li>Nos dois casos, o cliente não verifica nada</li>
-      </ul></div>
-      <div class="si"><div class="h">Onde a LYVENA está</div><ul>
-        <li>Promessa contida, sem velocidade e sem quilos</li>
-        <li>Dose aberta em miligramas, ingrediente por ingrediente</li>
-        <li>Seis meses, quatro fases, acompanhamento em cada uma</li>
-      </ul></div>
+    <p class="lbl rv">The Brand</p>
+    <h2 class="rv">Wellness designed<br>for real life.</h2>
+    <div class="rule rv"></div>
+    <div class="col rv">
+      <p class="body-xl">Most supplement companies are built around products.</p>
+      <p class="body-xl"><strong style="font-weight:600">Lyvena is built around the journey.</strong></p>
+      <p class="body-xl">We combine evidence-based supplementation, transparent formulations, structured protocols and continuous education to help people understand not only what they are taking — but why, when and for how long.</p>
     </div>
-    <p style="opacity:.85">Esse espaço é defensável porque ocupá-lo exige decisão de produto, não só de comunicação. Copiar o discurso é de graça; <b>copiar a dose custa margem</b>.</p>
+    <p class="pull rv">Not another supplement catalog.<br><em>A health system people can actually follow.</em></p>
+    <div class="pt rv">
+      <button class="pt-t" aria-expanded="false">Português <span class="ar">↓</span></button>
+      <div class="pt-w"><div class="pt-c"><div class="pt-i">
+        <span class="t">Bem-estar pensado para a vida real.</span>
+        <p>A maioria das empresas de suplementos é construída ao redor de produtos. <strong>A Lyvena é construída ao redor da jornada.</strong></p>
+        <p>Combinamos suplementação baseada em evidências, formulações transparentes, protocolos estruturados e educação contínua para que as pessoas entendam não apenas o que estão tomando — mas por quê, quando e por quanto tempo.</p>
+        <p>Não estamos construindo mais um catálogo de suplementos. <strong>Estamos construindo um sistema de saúde que as pessoas realmente conseguem seguir.</strong></p>
+      </div></div></div>
+    </div>
+    <figure class="fig rv">
+      <img src="assets/pack.jpg" alt="Lyvena Health product range" width="1500" height="1000" loading="lazy">
+      <figcaption>Product direction study</figcaption>
+    </figure>
+  </div>
+</section>
 
-    <div class="nums">
-      <div><div class="l">Protocolo</div><div class="vv">6 meses</div><div class="s">quatro fases</div></div>
-      <div><div class="l">Rótulo</div><div class="vv">mg abertos</div><div class="s">sem blend</div></div>
-      <div><div class="l">USPTO</div><div class="vv">0 conflitos</div><div class="s">raio fonético vazio</div></div>
-      <div><div class="l">Flórida</div><div class="vv">Livre</div><div class="s">entidade e marca estadual</div></div>
+<!-- ============ 04 PURPOSE / MISSION / VISION ============ -->
+<section class="s on-green">
+  <img class="wm" src="assets/symbol-light.png" alt="" aria-hidden="true">
+  <div class="in">
+    <p class="lbl rv">Foundation</p>
+    <h2 class="rv" style="max-width:24ch">Why we exist,<br>what we do,<br>where we're going.</h2>
+    <div style="margin-top:clamp(42px,6vw,72px)">
+      <div class="pmv rv"><div class="k">Purpose</div><div class="v">Help people sustain better choices — not for a month, but for life.</div></div>
+      <div class="pmv rv"><div class="k">Mission</div><div class="v">Turn science into simple, structured health protocols that fit real life — and support people throughout the journey.</div></div>
+      <div class="pmv rv"><div class="k">Vision</div><div class="v">Build Lyvena into a trusted health and wellness brand known for transparency, consistency and long-term progress.</div></div>
+    </div>
+    <div class="pt rv">
+      <button class="pt-t" aria-expanded="false">Português <span class="ar">↓</span></button>
+      <div class="pt-w"><div class="pt-c"><div class="pt-i">
+        <p><strong>Purpose.</strong> Ajudar pessoas a sustentar escolhas melhores — não por um mês, mas por toda a vida.</p>
+        <p><strong>Mission.</strong> Transformar ciência em protocolos de saúde simples e estruturados, que funcionem na vida real — acompanhando as pessoas ao longo de toda a jornada.</p>
+        <p><strong>Vision.</strong> Construir a Lyvena como uma marca de saúde e bem-estar reconhecida pela confiança, transparência, consistência e progresso de longo prazo.</p>
+      </div></div></div>
     </div>
   </div>
 </section>
 
-<section class="band" id="identidade">
+<!-- ============ 05 VALUES ============ -->
+<section class="s">
   <div class="in">
-    <p class="kick">03 · A identidade</p>
-    <h2>Verde profundo, terracota e muito espaço</h2>
-    <p class="lede">Escolhida para funcionar em três lugares ao mesmo tempo: o rótulo na mão, o anúncio em miniatura no feed e o checkout no celular. Esta página usa as cores da marca.</p>
+    <p class="lbl rv">Values</p>
+    <h2 class="rv">What we believe.</h2>
+    <div style="margin-top:clamp(40px,5.5vw,66px)">
+      <div class="num rv"><div class="n">01</div><div><div class="h">Evidence over hype</div><div class="d"><b>Science before marketing.</b> Every formulation should have a clear reason to exist.</div></div></div>
+      <div class="num rv"><div class="n">02</div><div><div class="h">Radical transparency</div><div class="d"><b>Clear ingredients. Clear doses. Clear purpose.</b> No proprietary blends hiding what the customer is actually taking.</div></div></div>
+      <div class="num rv"><div class="n">03</div><div><div class="h">Progress over promises</div><div class="d"><b>We do not sell miracles.</b> We build systems designed to support consistent progress.</div></div></div>
+      <div class="num rv"><div class="n">04</div><div><div class="h">Follow-through</div><div class="d"><b>The relationship does not end at checkout.</b> Education, guidance and follow-up are part of the product.</div></div></div>
+    </div>
+    <div class="pt rv">
+      <button class="pt-t" aria-expanded="false">Português <span class="ar">↓</span></button>
+      <div class="pt-w"><div class="pt-c"><div class="pt-i">
+        <p><strong>01 · Evidência acima do exagero.</strong> Ciência antes do marketing. Cada formulação deve ter uma razão clara para existir.</p>
+        <p><strong>02 · Transparência radical.</strong> Ingredientes claros. Doses claras. Propósito claro. Sem fórmulas proprietárias escondendo o que o cliente realmente está consumindo.</p>
+        <p><strong>03 · Progresso acima de promessas.</strong> Não vendemos milagres. Construímos sistemas pensados para apoiar um progresso consistente.</p>
+        <p><strong>04 · Continuidade.</strong> O relacionamento não termina no checkout. Educação, orientação e acompanhamento fazem parte do produto.</p>
+      </div></div></div>
+    </div>
+  </div>
+</section>
 
-    <h3>Logotipo</h3>
-    <div class="g g2">
-      <div style="background:var(--bone);border:1px solid var(--mist);padding:38px 26px;text-align:center">
-        <img src="assets/marca/logo-v2.png" alt="Logotipo primário" width="1083" height="340" style="display:block;width:100%;max-width:330px;height:auto;margin:0 auto">
-        <div class="mono" style="font-size:9px;letter-spacing:.2em;margin-top:18px;opacity:.5">PRIMÁRIA · SOBRE OFF WHITE</div>
+<!-- ============ 06 THE IDEA ============ -->
+<section class="s on-beige">
+  <div class="in">
+    <p class="lbl rv">The Idea</p>
+    <h2 class="rv" style="font-size:clamp(2.3rem,6.4vw,4.6rem)">From supplements<br>to protocols.</h2>
+    <p class="pull rv" style="max-width:24ch">Most supplement companies sell bottles.<br><em>Lyvena builds a journey.</em></p>
+    <div class="col rv">
+      <p class="body-xl">Instead of asking customers to navigate dozens of disconnected products, Lyvena organizes supplementation around clear objectives and structured protocols.</p>
+    </div>
+    <div class="col-n rv" style="font-family:var(--serif);font-size:clamp(1.2rem,2.4vw,1.65rem);line-height:1.45;color:var(--green);margin:clamp(34px,4.6vw,56px) 0 0">
+      Each product has a role.<br>Each phase has a purpose.<br>Each protocol has a beginning, a progression and a reason to continue.
+    </div>
+    <div class="pt rv">
+      <button class="pt-t" aria-expanded="false">Português <span class="ar">↓</span></button>
+      <div class="pt-w"><div class="pt-c"><div class="pt-i">
+        <span class="t">De suplementos para protocolos.</span>
+        <p>A maioria das empresas de suplementos vende frascos. <strong>A Lyvena constrói uma jornada.</strong></p>
+        <p>Em vez de pedir que o cliente navegue por dezenas de produtos desconectados, a Lyvena organiza a suplementação em torno de objetivos claros e protocolos estruturados.</p>
+        <p>Cada produto tem uma função. Cada fase tem um propósito. Cada protocolo tem um início, uma evolução e uma razão para continuar.</p>
+      </div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 07 THE PROTOCOL MODEL ============ -->
+<section class="s on-green">
+  <div class="in">
+    <p class="lbl rv">The Protocol Model</p>
+    <h2 class="rv">One continuous<br>journey.</h2>
+    <div class="phases">
+      <div class="ph-top rv">
+        <div class="ph-big">6<span>Months</span></div>
+        <div class="ph-big" style="color:var(--sage)">4<span>Phases</span></div>
+        <div class="ph-big" style="font-size:clamp(1.3rem,3vw,2.1rem);line-height:1.2;max-width:14ch;align-self:center">One continuous journey</div>
       </div>
-      <div style="background:var(--cypress);border:1px solid var(--cypress);padding:38px 26px;text-align:center">
-        <img src="assets/marca/logo-v2-invertido.png" alt="Logotipo invertido" width="1083" height="340" style="display:block;width:100%;max-width:330px;height:auto;margin:0 auto">
-        <div class="mono" style="font-size:9px;letter-spacing:.2em;margin-top:18px;color:var(--sage)">INVERTIDA · SOBRE NATURAL GREEN</div>
+      <div class="ph-grid rv">
+        <div class="ph-cell"><div class="ph-dot"></div><div class="pn">Phase 01</div><div class="pt2">Start</div><div class="pd">The protocol begins. What to expect, and what not to expect yet.</div></div>
+        <div class="ph-cell"><div class="ph-dot"></div><div class="pn">Phase 02</div><div class="pt2">Adapt</div><div class="pd">Routine settles. Education shifts to consistency.</div></div>
+        <div class="ph-cell"><div class="ph-dot"></div><div class="pn">Phase 03</div><div class="pt2">Progress</div><div class="pd">The phase where most people stop. Follow-up is heaviest here.</div></div>
+        <div class="ph-cell"><div class="ph-dot"></div><div class="pn">Phase 04</div><div class="pt2">Sustain</div><div class="pd">The protocol becomes a habit, and opens what comes next.</div></div>
       </div>
     </div>
-    <ul class="ls">
-      <li><b>Caixa alta, espaçamento aberto.</b> Na caixa baixa a cauda do “y” passava por baixo do “v” e o nome lia “Lyena” em tamanho pequeno. Em caixa alta a ambiguidade não tem como acontecer.</li>
-      <li><b>Área de proteção</b> igual à altura do <b>L</b>. <b>Mínimo</b> de 24 mm impresso e 90 px digital; abaixo disso, só o monograma <b>LY</b>.</li>
-      <li><b>™ e não ®</b> até o registro sair.</li>
+    <div class="col rv">
+      <p class="body-xl">The initial Lyvena model is designed around a six-month relationship rather than an isolated 30-day transaction.</p>
+      <p class="body-xl">The protocol evolves through defined phases, allowing formulation, education and communication to follow the customer's journey over time.</p>
+    </div>
+    <p class="pull rv">The bottle is a component.<br><em>The protocol is the product.</em></p>
+    <div class="pt rv">
+      <button class="pt-t" aria-expanded="false">Português <span class="ar">↓</span></button>
+      <div class="pt-w"><div class="pt-c"><div class="pt-i">
+        <p>O modelo inicial da Lyvena foi pensado em torno de um relacionamento de seis meses, e não de uma transação isolada de 30 dias.</p>
+        <p>O protocolo evolui por fases definidas, permitindo que formulação, educação e comunicação acompanhem a jornada do cliente ao longo do tempo.</p>
+        <p><strong>O frasco é um componente. O protocolo é o produto.</strong></p>
+      </div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 08 WHY LYVENA IS DIFFERENT ============ -->
+<section class="s">
+  <div class="in">
+    <p class="lbl rv">The Difference</p>
+    <h2 class="rv">Why Lyvena<br>is different.</h2>
+    <div style="margin-top:clamp(40px,5.5vw,66px)">
+      <div class="num rv"><div class="n">01</div><div><div class="h">Transparent</div><div class="d">Active ingredients and meaningful doses clearly communicated.</div></div></div>
+      <div class="num rv"><div class="n">02</div><div><div class="h">Structured</div><div class="d">Products connected through protocols rather than sold as an unrelated catalog.</div></div></div>
+      <div class="num rv"><div class="n">03</div><div><div class="h">Educational</div><div class="d">Customers understand what they are taking, why they are taking it and where they are in the journey.</div></div></div>
+      <div class="num rv"><div class="n">04</div><div><div class="h">Continuous</div><div class="d"><b>Acquisition is only the beginning.</b> Follow-through is built into the business model.</div></div></div>
+    </div>
+    <div class="pt rv">
+      <button class="pt-t" aria-expanded="false">Português <span class="ar">↓</span></button>
+      <div class="pt-w"><div class="pt-c"><div class="pt-i">
+        <p><strong>01 · Transparente.</strong> Ingredientes ativos e doses relevantes comunicados de forma clara.</p>
+        <p><strong>02 · Estruturada.</strong> Produtos conectados através de protocolos, e não vendidos como um catálogo sem relação entre si.</p>
+        <p><strong>03 · Educativa.</strong> O cliente entende o que está utilizando, por que está utilizando e em qual etapa da jornada se encontra.</p>
+        <p><strong>04 · Contínua.</strong> A aquisição é apenas o começo. A continuidade faz parte do próprio modelo de negócio.</p>
+      </div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 09 THE GROWTH MODEL ============ -->
+<section class="s on-sage">
+  <div class="in">
+    <p class="lbl rv">The Growth Model</p>
+    <h2 class="rv">Education first.<br>Conversion second.</h2>
+    <div class="flow">
+      <div class="flow-i rv"><div class="flow-k">Attract</div><div class="flow-m">Paid media → educational experience</div><div class="flow-d">Advertising introduces the problem and invites the audience to learn — instead of immediately pushing a product.</div></div>
+      <div class="flow-i rv"><div class="flow-k">Educate</div><div class="flow-m">Live educational webinar</div><div class="flow-d">A long-form educational experience explains the problem, the method and the logic behind the protocol.</div></div>
+      <div class="flow-i rv"><div class="flow-k">Convert</div><div class="flow-m">Six-month protocol</div><div class="flow-d">At the end of the educational experience, qualified customers are invited to begin the complete protocol.</div></div>
+      <div class="flow-i rv"><div class="flow-k">Expand</div><div class="flow-m">Relevant add-ons</div><div class="flow-d">Complementary products can increase customer value when they genuinely support the journey.</div></div>
+      <div class="flow-i rv"><div class="flow-k">Follow through</div><div class="flow-m">CRM + sales + customer experience</div><div class="flow-d">Automation and human follow-up continue the relationship according to engagement, intent and customer needs.</div></div>
+    </div>
+    <div class="pt rv">
+      <button class="pt-t" aria-expanded="false">Português <span class="ar">↓</span></button>
+      <div class="pt-w"><div class="pt-c"><div class="pt-i">
+        <span class="t">Educação primeiro. Conversão depois.</span>
+        <p><strong>Atrair.</strong> Mídia paga → experiência educacional. A publicidade apresenta o problema e convida o público a aprender, em vez de tentar vender imediatamente um produto.</p>
+        <p><strong>Educar.</strong> Webinar educacional ao vivo. Uma experiência de conteúdo mais profunda explica o problema, o método e a lógica por trás do protocolo.</p>
+        <p><strong>Converter.</strong> Protocolo de seis meses. Ao final da experiência educacional, clientes qualificados são convidados a iniciar o protocolo completo.</p>
+        <p><strong>Expandir.</strong> Produtos complementares relevantes podem ampliar o valor do cliente quando realmente complementam sua jornada.</p>
+        <p><strong>Acompanhar.</strong> CRM + comercial + experiência do cliente. Automação e acompanhamento humano mantêm o relacionamento de acordo com engajamento, intenção e necessidades do cliente.</p>
+      </div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 10 WHY EDUCATION ============ -->
+<section class="s">
+  <img class="wm" src="assets/symbol.png" alt="" aria-hidden="true">
+  <div class="in">
+    <p class="lbl rv">Why Education</p>
+    <h2 class="rv">Trust before<br>transaction.</h2>
+    <div class="rule rv"></div>
+    <div class="col rv">
+      <p class="body-xl">High-consideration health decisions need more than a product page.</p>
+      <p class="body-xl">Education gives Lyvena the time to explain the method, establish credibility and help customers understand the role of the protocol before they make a decision.</p>
+    </div>
+    <p class="pull rv">We don't need to sell harder.<br><em>We need to explain better.</em></p>
+    <div class="pt rv">
+      <button class="pt-t" aria-expanded="false">Português <span class="ar">↓</span></button>
+      <div class="pt-w"><div class="pt-c"><div class="pt-i">
+        <span class="t">Confiança antes da transação.</span>
+        <p>Decisões importantes relacionadas à saúde precisam de mais do que uma página de produto.</p>
+        <p>A educação dá à Lyvena o espaço necessário para explicar o método, construir credibilidade e ajudar o cliente a compreender o papel do protocolo antes de tomar uma decisão.</p>
+        <p><strong>Não precisamos vender com mais pressão. Precisamos explicar melhor.</strong></p>
+      </div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 11 BUSINESS MODEL ============ -->
+<section class="s on-beige">
+  <div class="in">
+    <p class="lbl rv">Business Model</p>
+    <h2 class="rv">One acquisition.<br>A longer relationship.</h2>
+    <div class="pil rv">
+      <div><div class="ph3">Higher customer value</div><div class="pb">A multi-month relationship, not a single bottle.</div><div class="pp">Instead of acquiring a customer for one purchase, Lyvena is designed around a protocol that spans months.</div></div>
+      <div><div class="ph3">Better unit economics</div><div class="pb">Acquisition supported by a higher-value first order.</div><div class="pp">A protocol-based offer allows acquisition costs to be supported by a higher-value initial relationship.</div></div>
+      <div><div class="ph3">Stronger brand trust</div><div class="pb">Education happens before the sale.</div><div class="pp">Customers understand the philosophy and the protocol before being asked to buy.</div></div>
+    </div>
+    <div class="pt rv">
+      <button class="pt-t" aria-expanded="false">Português <span class="ar">↓</span></button>
+      <div class="pt-w"><div class="pt-c"><div class="pt-i">
+        <span class="t">Uma aquisição. Um relacionamento mais longo.</span>
+        <p><strong>Maior valor por cliente.</strong> Em vez de adquirir um cliente para um único frasco, a Lyvena foi projetada para construir um relacionamento de vários meses.</p>
+        <p><strong>Melhor economia unitária.</strong> Uma oferta baseada em protocolo permite que o custo de aquisição seja sustentado por uma relação inicial de maior valor.</p>
+        <p><strong>Maior confiança na marca.</strong> A educação acontece antes da venda. O cliente entende a filosofia e o protocolo antes de ser convidado a comprar.</p>
+      </div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 12 CUSTOMER JOURNEY ============ -->
+<section class="s">
+  <div class="in">
+    <p class="lbl rv">Customer Journey</p>
+    <h2 class="rv">The relationship starts<br>after the payment.</h2>
+    <div class="jrn rv">
+      <span class="jrn-s">Discover</span><span class="jrn-a">→</span>
+      <span class="jrn-s">Learn</span><span class="jrn-a">→</span>
+      <span class="jrn-s">Understand</span><span class="jrn-a">→</span>
+      <span class="jrn-s">Start</span><span class="jrn-a">→</span>
+      <span class="jrn-s">Follow</span><span class="jrn-a">→</span>
+      <span class="jrn-s">Progress</span><span class="jrn-a">→</span>
+      <span class="jrn-s">Continue</span>
+    </div>
+    <div class="col rv">
+      <p class="body-xl">The customer journey does not end when payment is approved.</p>
+      <p class="body-xl"><strong style="font-weight:600">That is where the Lyvena relationship begins.</strong></p>
+      <p class="body-xl">Education, CRM, content, follow-up and future protocols create continuity beyond the first transaction.</p>
+    </div>
+    <div class="pt rv">
+      <button class="pt-t" aria-expanded="false">Português <span class="ar">↓</span></button>
+      <div class="pt-w"><div class="pt-c"><div class="pt-i">
+        <p>A jornada do cliente não termina quando o pagamento é aprovado. <strong>É exatamente ali que começa o relacionamento com a Lyvena.</strong></p>
+        <p>Educação, CRM, conteúdo, acompanhamento e futuros protocolos criam continuidade muito além da primeira transação.</p>
+      </div></div></div>
+    </div>
+    <figure class="fig rv">
+      <img src="assets/stationery.jpg" alt="Lyvena Health brand applications" width="1500" height="1000" loading="lazy">
+      <figcaption>Brand application study</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ============ 13 THE ECOSYSTEM ============ -->
+<section class="s on-green">
+  <div class="in">
+    <p class="lbl rv">The Ecosystem</p>
+    <h2 class="rv" style="max-width:22ch">A platform, not<br>a product line.</h2>
+    <div class="eco-c rv">
+      <div class="t">At the center</div>
+      <div class="n">Lyvena Health</div>
+    </div>
+    <div class="eco">
+      <div class="rv"><div class="ek">Protocols</div><div class="ed">Structured health journeys.</div></div>
+      <div class="rv"><div class="ek">Supplements</div><div class="ed">Evidence-based formulations.</div></div>
+      <div class="rv"><div class="ek">Education</div><div class="ed">Content, webinars and health literacy.</div></div>
+      <div class="rv"><div class="ek">Technology</div><div class="ed">CRM, personalization and customer journey.</div></div>
+      <div class="rv"><div class="ek">Community</div><div class="ed">Engagement, accountability and continuity.</div></div>
+      <div class="rv"><div class="ek">Beauty &amp; Longevity</div><div class="ed">Future complementary wellness categories.</div></div>
+    </div>
+    <div class="pt rv">
+      <button class="pt-t" aria-expanded="false">Português <span class="ar">↓</span></button>
+      <div class="pt-w"><div class="pt-c"><div class="pt-i">
+        <p><strong>Protocolos.</strong> Jornadas estruturadas de saúde.</p>
+        <p><strong>Suplementos.</strong> Formulações baseadas em evidências.</p>
+        <p><strong>Educação.</strong> Conteúdo, webinars e educação em saúde.</p>
+        <p><strong>Tecnologia.</strong> CRM, personalização e jornada do cliente.</p>
+        <p><strong>Comunidade.</strong> Engajamento, responsabilidade e continuidade.</p>
+        <p><strong>Beleza &amp; Longevidade.</strong> Futuras categorias complementares de wellness.</p>
+      </div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 14 THE FLYWHEEL ============ -->
+<section class="s on-green">
+  <div class="in">
+    <p class="lbl rv">The Flywheel</p>
+    <h2 class="rv" style="max-width:20ch">Each turn makes<br>the next one easier.</h2>
+    <div class="fw rv">
+<svg viewBox="0 0 640 640" role="img" aria-label="Lyvena flywheel: education, trust, protocol, experience, retention, community, new protocols">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,1 L8,5 L0,9" fill="none" stroke="#B76545" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+<path class="fw-arc" d="M352.2,116.5 A206,206 0 0 1 459.0,167.9" fill="none" stroke="#8AA793" stroke-opacity=".45" stroke-width="1.2" marker-end="url(#ah)"/>
+<path class="fw-arc" d="M499.2,218.3 A206,206 0 0 1 525.5,333.9" fill="none" stroke="#8AA793" stroke-opacity=".45" stroke-width="1.2" marker-end="url(#ah)"/>
+<path class="fw-arc" d="M511.2,396.7 A206,206 0 0 1 437.3,489.3" fill="none" stroke="#8AA793" stroke-opacity=".45" stroke-width="1.2" marker-end="url(#ah)"/>
+<path class="fw-arc" d="M379.2,517.3 A206,206 0 0 1 260.8,517.3" fill="none" stroke="#8AA793" stroke-opacity=".45" stroke-width="1.2" marker-end="url(#ah)"/>
+<path class="fw-arc" d="M202.7,489.3 A206,206 0 0 1 128.8,396.7" fill="none" stroke="#8AA793" stroke-opacity=".45" stroke-width="1.2" marker-end="url(#ah)"/>
+<path class="fw-arc" d="M114.5,333.9 A206,206 0 0 1 140.8,218.3" fill="none" stroke="#8AA793" stroke-opacity=".45" stroke-width="1.2" marker-end="url(#ah)"/>
+<path class="fw-arc" d="M181.0,167.9 A206,206 0 0 1 287.8,116.5" fill="none" stroke="#8AA793" stroke-opacity=".45" stroke-width="1.2" marker-end="url(#ah)"/>
+<circle class="fw-dot" cx="320.0" cy="114.0" r="5" fill="#B76545"/>
+<text class="fw-lab" x="320.0" y="70.0" text-anchor="middle">EDUCATION</text>
+<circle class="fw-dot" cx="481.1" cy="191.6" r="5" fill="#B76545"/>
+<text class="fw-lab" x="512.3" y="162.6" text-anchor="start">TRUST</text>
+<circle class="fw-dot" cx="520.8" cy="365.8" r="5" fill="#B76545"/>
+<text class="fw-lab" x="559.8" y="388.7" text-anchor="start">PROTOCOL</text>
+<circle class="fw-dot" cx="409.4" cy="505.6" r="5" fill="#B76545"/>
+<text class="fw-lab" x="426.7" y="555.6" text-anchor="start">EXPERIENCE</text>
+<circle class="fw-dot" cx="230.6" cy="505.6" r="5" fill="#B76545"/>
+<text class="fw-lab" x="213.3" y="555.6" text-anchor="end">RETENTION</text>
+<circle class="fw-dot" cx="119.2" cy="365.8" r="5" fill="#B76545"/>
+<text class="fw-lab" x="80.2" y="388.7" text-anchor="end">COMMUNITY</text>
+<circle class="fw-dot" cx="158.9" cy="191.6" r="5" fill="#B76545"/>
+<text class="fw-lab" x="127.7" y="155.6" text-anchor="end">NEW</text>
+<text class="fw-lab" x="127.7" y="172.6" text-anchor="end">PROTOCOLS</text>
+<text class="fw-c1" x="320" y="314" text-anchor="middle">LYVENA HEALTH</text>
+<text class="fw-c2" x="320" y="346" text-anchor="middle">Progress, quietly.</text>
+<circle cx="320" cy="320" r="108" fill="none" stroke="#F6F5F2" stroke-opacity=".12" stroke-width="1"/>
+</svg>    </div>
+    <div class="fw-m rv"><ul>
+      <li>Education</li><li>Trust</li><li>Protocol</li><li>Experience</li>
+      <li>Retention</li><li>Community</li><li>New protocols</li>
     </ul>
-
-    <h3>Paleta</h3>
-    <div id="pal"></div>
-    <p class="sm" style="margin-top:18px"><b>45 / 15 / 30 / 10.</b> Off White em 45% da peça, Beige em 15%, Natural Green em 30%, Terracotta em 10%. <b>Terracotta é exclusiva da ação</b> — botão, selo, número. Se virar cor decorativa, o botão para de ser visto.</p>
-
-    <h3>O canal · grafismo proprietário</h3>
-    <div class="g g2" style="align-items:center">
-      <div>
-        <p>Uma linha vertical fina com um ponto sobre ela. Vem do significado do nome e marca a posição da pessoa no protocolo: <b>o ponto sobe conforme as fases avançam</b>.</p>
-        <p class="sm" style="opacity:.8">É o que torna a marca reconhecível quando copiarem a paleta. Aplica na lateral do rótulo, no divisor da página, no topo do e-mail e na lateral da caixa — que vira régua de progresso em cima da pia.</p>
-      </div>
-      <div style="position:relative;border:1px solid var(--mist);background:rgba(255,255,255,.5);padding:36px 24px 36px 58px;min-height:190px;display:flex;flex-direction:column;justify-content:space-between">
-        <div style="position:absolute;left:30px;top:24px;bottom:24px;width:1px;background:var(--sage)"></div>
-        <div style="position:absolute;left:26px;top:30%;width:9px;height:9px;border-radius:50%;background:var(--copper)"></div>
-        <div class="mono" style="font-size:10px;letter-spacing:.14em;opacity:.45">FASE 01 · ADAPTAÇÃO</div>
-        <div class="mono" style="font-size:10px;letter-spacing:.14em;color:var(--copper)">FASE 02 · CONSTÂNCIA</div>
-        <div class="mono" style="font-size:10px;letter-spacing:.14em;opacity:.45">FASE 03 · MANUTENÇÃO</div>
-        <div class="mono" style="font-size:10px;letter-spacing:.14em;opacity:.45">FASE 04 · LONGEVIDADE</div>
-      </div>
+      <p style="font-family:var(--serif);font-size:1.15rem;color:var(--beige);margin-top:26px">Lyvena Health — Progress, quietly.</p>
     </div>
-
-    <h3>Tipografia</h3>
-    <div class="g g3">
-      <div class="c"><div class="n">Logotipo e título</div><div class="t" style="font-family:'Instrument Serif',Georgia,serif">Playfair Display</div><p>Serifada de contraste alto. No logotipo, caixa alta.</p></div>
-      <div class="c"><div class="n">Texto e rótulo</div><div class="t">Montserrat</div><p>Sans geométrica. Legível a 7 pt no rótulo e em miniatura no anúncio.</p></div>
-      <div class="c"><div class="n">Dose e fase</div><div class="t mono" style="font-size:1.1rem">1.200 mg</div><p>Monoespaçada. Faz o número parecer dado — e dado é o que a marca vende.</p></div>
+    <div class="pt rv">
+      <button class="pt-t" aria-expanded="false">Português <span class="ar">↓</span></button>
+      <div class="pt-w"><div class="pt-c"><div class="pt-i">
+        <p>Educação gera confiança. Confiança leva ao protocolo. O protocolo cria experiência. A experiência fortalece retenção. A retenção cria comunidade. A comunidade abre espaço para novos protocolos.</p>
+        <p><strong>O ciclo volta a alimentar a educação e o crescimento da marca.</strong></p>
+      </div></div></div>
     </div>
   </div>
 </section>
 
-<section class="band sand" id="aplicacoes">
+<!-- ============ 15 LONG-TERM VISION ============ -->
+<section class="s on-beige">
+  <img class="wm" src="assets/symbol.png" alt="" aria-hidden="true">
   <div class="in">
-    <p class="kick">04 · As aplicações</p>
-    <h2>A marca vira pote, caixa e rótulo</h2>
-    <p class="lede">Marca-mãe forte e descritores funcionais curtos. Nenhum sub-nome ganha identidade própria — isso diluiria a única marca que vamos registrar.</p>
-
-    <div class="g g3">
-      <div class="c"><div class="n">Protocolo</div><div class="t">LYVENA CORE</div><p>Âncora metabólica.</p></div>
-      <div class="c"><div class="n">Protocolo</div><div class="t">LYVENA RITUAL</div><p>Saciedade diária.</p></div>
-      <div class="c"><div class="n">Order bump</div><div class="t">LYVENA CURB</div><p>Vontade de doce.</p></div>
-      <div class="c"><div class="n">Order bump</div><div class="t">LYVENA IGNITE</div><p>Termogênico da manhã.</p></div>
-      <div class="c"><div class="n">Fase 4</div><div class="t">LYVENA RENEW</div><p>Longevidade.</p></div>
-      <div class="c"><div class="n">Expansão</div><div class="t">LYVENA GLOW</div><p>Linha cosmética.</p></div>
+    <p class="lbl rv">The Vision</p>
+    <h2 class="rv" style="font-size:clamp(2.1rem,5.6vw,4rem);max-width:22ch">We're not building another supplement company.</h2>
+    <p class="pull rv" style="max-width:22ch">We're building a health brand designed around <em>continuity</em>.</p>
+    <div class="sym-div rv"><img src="assets/symbol.png" alt="" aria-hidden="true"></div>
+    <div class="col-n rv" style="font-family:var(--serif);font-size:clamp(1.15rem,2.3vw,1.6rem);line-height:1.5;color:var(--green)">
+      A brand where science defines the formulation.<br>
+      Education creates trust.<br>
+      Protocols create structure.<br>
+      Technology enables follow-through.<br>
+      And every new product has a clear role in the customer's journey.
     </div>
-
-    <h3>O rótulo</h3>
-    <p>É a peça mais importante da marca: onde o valor central deixa de ser discurso e vira prova, e o único ponto de contato que a cliente olha por seis meses.</p>
-    <ol class="ns">
-      <li><b>LYVENA</b> no topo. Nome do SKU abaixo, menor.</li>
-      <li><b>A fase do protocolo</b> em monoespaçada, com o canal na lateral.</li>
-      <li><b>A dose em destaque, na frente do pote</b> — ingrediente e miligramas, visível sem virar.</li>
-      <li><b>Supplement Facts</b> e disclaimer da FDA no painel traseiro, em inglês.</li>
-    </ol>
-    <div class="c" style="border-left:2px solid var(--copper)">
-      <div class="n">Decisão de design que é decisão de negócio</div>
-      <p style="font-size:14.5px">A dose na frente facilita a cópia da fórmula. É escolha consciente: o blend proprietário protege a fórmula e destrói o argumento da marca. Entre proteger a fórmula e proteger o posicionamento, esta marca protege o posicionamento.</p>
+    <p class="rv" style="font-family:var(--sans);font-size:11px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--terra);line-height:2.4;margin:clamp(38px,5vw,60px) 0 0">
+      No miracles.<br>No shortcuts.<br>No unnecessary noise.
+    </p>
+    <p class="sig rv" style="margin-top:clamp(28px,4vw,44px)">Just better systems for better health.</p>
+    <div class="pt rv">
+      <button class="pt-t" aria-expanded="false">Português <span class="ar">↓</span></button>
+      <div class="pt-w"><div class="pt-c"><div class="pt-i">
+        <span class="t">Não estamos construindo mais uma empresa de suplementos. Estamos construindo uma marca de saúde pensada em torno da continuidade.</span>
+        <p>Uma marca onde a ciência define a formulação. A educação constrói confiança. Os protocolos criam estrutura. A tecnologia possibilita acompanhamento. E cada novo produto tem uma função clara dentro da jornada do cliente.</p>
+        <p>Sem milagres. Sem atalhos. Sem ruído desnecessário.</p>
+        <p><strong>Apenas sistemas melhores para uma saúde melhor.</strong></p>
+      </div></div></div>
     </div>
-
-    <h3>Estudos de aplicação</h3>
-    <p class="sm" style="opacity:.78;margin-bottom:4px">Material de direção para o designer, não arte final.</p>
-    <div id="gal"></div>
-
-    <h3>O que corrigir antes de produzir</h3>
-    <ul class="ls">
-      <li><b>O ® nos estudos.</b> A marca não está registrada — usar ® antes da concessão é declaração falsa. Até sair, <b>™</b>.</li>
-      <li><b>“Lyvena Health” como logotipo.</b> Registrar <b>LYVENA</b> sozinho: “Health” é descritivo, não acrescenta proteção e amarra a marca a saúde. A marca não precisa ser igual ao domínio.</li>
-      <li><b>A dose não está na frente do pote.</b> “Energy · immunity · daily balance” são adjetivos, não miligramas.</li>
-      <li><b>A linha é um catálogo</b> — multivitamínico, colágeno, ômega 3. O nosso é um protocolo de seis meses com quatro SKUs encadeados.</li>
-      <li><b>O grafismo de ondas disputa com o canal.</b> Escolher uma assinatura só; as duas juntas viram ruído.</li>
-      <li><b>Gradiente metálico na folha</b> morre em miniatura e exige hot stamping no rótulo.</li>
-    </ul>
   </div>
 </section>
 
-<section class="band" id="pedido">
-  <div class="in narrow">
-    <p class="kick">05 · O pedido</p>
-    <h2>O que precisa ser decidido</h2>
-    <ol class="ns">
-      <li><b>Aprovar LYVENA como nome.</b> É a decisão que destrava todas as outras.</li>
-      <li><b>Abrir a entidade na Flórida e registrar domínio e perfis</b> — tudo no mesmo dia, antes de qualquer conversa externa. <b>lyvenahealth.com</b> está livre.</li>
-      <li><b>Depositar o pedido federal de marca para suplemento e para cosmético ao mesmo tempo</b>, com parecer de advogado de PI antes do depósito. <span style="opacity:.72">Nos EUA o pedido exige declarar a categoria do produto e a taxa é cobrada por categoria — suplemento é a <span class="mono">005</span>, cosmético é a <span class="mono">003</span>.</span></li>
-      <li><b>Fechar o rótulo com a dose na frente</b> desde o primeiro rascunho.</li>
-    </ol>
-    <div class="c" style="border-left:2px solid var(--copper);margin-top:18px">
-      <div class="n">Quanto custa o registro · tabela oficial do USPTO, outubro de 2026</div>
-      <p style="font-size:14.5px">Taxas de governo, por categoria. Não incluem advogado.</p>
-      <div style="overflow-x:auto;margin:14px 0"><table style="width:100%;border-collapse:collapse;min-width:480px;font-size:13.5px">
-        <tr style="border-bottom:1px solid var(--mist)">
-          <th style="text-align:left;padding:9px 14px 9px 0;font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.13em;text-transform:uppercase;color:var(--copper);font-weight:500">Quando</th>
-          <th style="text-align:left;padding:9px 14px 9px 0;font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.13em;text-transform:uppercase;color:var(--copper);font-weight:500">O quê</th>
-          <th style="text-align:right;padding:9px 14px 9px 0;font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.13em;text-transform:uppercase;color:var(--copper);font-weight:500">Por categoria</th>
-          <th style="text-align:right;padding:9px 0;font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.13em;text-transform:uppercase;color:var(--copper);font-weight:500">Duas</th></tr>
-        <tr style="border-bottom:1px solid var(--mist)"><td style="padding:10px 14px 10px 0">Agora</td><td style="padding:10px 14px 10px 0">Depósito do pedido</td><td class="mono" style="text-align:right;padding:10px 14px 10px 0">US$ 350</td><td class="mono" style="text-align:right;padding:10px 0;font-weight:600">US$ 700</td></tr>
-        <tr style="border-bottom:1px solid var(--mist)"><td style="padding:10px 14px 10px 0">Ao começar a vender</td><td style="padding:10px 14px 10px 0">Declaração de uso</td><td class="mono" style="text-align:right;padding:10px 14px 10px 0">US$ 150</td><td class="mono" style="text-align:right;padding:10px 0;font-weight:600">US$ 300</td></tr>
-        <tr style="border-bottom:1px solid var(--mist);background:rgba(183,101,69,.07)"><td style="padding:10px 14px 10px 0"><b>Até o registro sair</b></td><td style="padding:10px 14px 10px 0"></td><td style="padding:10px 14px 10px 0"></td><td class="mono" style="text-align:right;padding:10px 0;font-weight:600">US$ 1.000</td></tr>
-        <tr style="border-bottom:1px solid var(--mist)"><td style="padding:10px 14px 10px 0">Anos 5 e 6</td><td style="padding:10px 14px 10px 0">Declaração de uso continuado</td><td class="mono" style="text-align:right;padding:10px 14px 10px 0">US$ 325</td><td class="mono" style="text-align:right;padding:10px 0">US$ 650</td></tr>
-        <tr><td style="padding:10px 14px 10px 0">A cada 10 anos</td><td style="padding:10px 14px 10px 0">Renovação</td><td class="mono" style="text-align:right;padding:10px 14px 10px 0">US$ 650</td><td class="mono" style="text-align:right;padding:10px 0">US$ 1.300</td></tr>
-      </table></div>
-      <p style="font-size:14.5px"><b>US$ 400 que dá para não gastar.</b> Se a descrição do produto for escrita à mão no formulário, o USPTO cobra <b>US$ 200 a mais por categoria</b>. Usando as descrições já aprovadas do manual do próprio USPTO, essa taxa não existe. As duas que servem para nós: <span class="mono">005-101 · Dietary supplements</span> e <span class="mono">003-913 · Non-medicated skin care preparations</span>.</p>
-      <p style="font-size:14.5px;margin-top:11px;opacity:.82"><b>Fora da tabela:</b> advogado de propriedade intelectual. Não é taxa de governo e varia muito — a faixa de mercado para depósito costuma ficar entre US$ 500 e US$ 1.500 por categoria. É estimativa, não número oficial. Vale o custo: erro na descrição do produto volta como exigência e atrasa meses.</p>
-      <p style="font-size:14.5px;margin-top:11px;opacity:.82"><b>Se demorar a vender:</b> o pedido por intenção de uso dá 6 meses após a aprovação para comprovar venda, prorrogáveis de 6 em 6 até 3 anos. Cada prorrogação custa US$ 125 por categoria, US$ 250 pelas duas.</p>
-    </div>
-
-    <div class="c" style="border-left:2px solid var(--copper);margin-top:26px">
-      <div class="n">Estado da disponibilidade · consultado em 6 de outubro de 2026</div>
-      <p style="font-size:14.5px"><b>Sunbiz, nome de entidade — livre.</b> A lista alfabética passa de LYVEN TRAVEL INC direto para os seguintes, sem nenhuma LYVENA.<br>
-      <b>Sunbiz, marca estadual da Flórida — livre.</b> Nada entre LYVENA e LYVWELL COMMUNITIES.<br>
-      <b>USPTO, marca federal — raio fonético vazio.</b> LYVENA, LIVENA, LEVENA e LYVINA retornam zero nas duas categorias que a empresa vai usar, suplemento e cosmético.</p>
-      <p style="font-size:14.5px;margin-top:11px"><b>Os três são testes diferentes, e é por isso que ter os três importa.</b> Abrir a LLC na Flórida garante o nome da empresa naquele estado e <b>não dá nenhum direito de marca</b>. O registro federal é o que impede um concorrente de usar o nome no país inteiro — e é o único que vale quando a marca começar a funcionar e aparecerem cópias.</p>
-    </div>
-
-    <div class="c" style="border-left:2px solid var(--copper);margin-top:18px">
-      <div class="n">O que é “categoria” num registro de marca</div>
-      <p style="font-size:14.5px">A categoria é <b>do produto, não da marca</b>. Uma marca nunca é registrada em geral — é registrada <b>para vender coisas específicas</b>. Os escritórios de marca do mundo dividem tudo o que existe em 45 categorias numeradas, e no pedido você declara em quais vai atuar. A exclusividade vale <b>só dentro do que foi declarado</b>.</p>
-      <p style="font-size:14.5px;margin-top:11px">É por isso que existem duas marcas <b>Dove</b> nos Estados Unidos, de donos diferentes: o sabonete da Unilever está em cosmético, o chocolate da Mars está em alimentos. Mesma palavra, categorias diferentes, nenhuma conflita com a outra.</p>
-      <div class="g g2" style="margin-top:14px">
-        <div class="c"><div class="n">Categoria 005</div><div class="t">Suplemento</div><p>Farmacêutico e suplemento alimentar. É onde ficam as cápsulas do protocolo.</p></div>
-        <div class="c"><div class="n">Categoria 003</div><div class="t">Cosmético</div><p>Cosmético e cuidado da pele. É onde fica a linha GLOW, da fase 4.</p></div>
-      </div>
-      <p style="font-size:14.5px;margin-top:14px"><b>A consequência prática.</b> Registrando só suplemento, a categoria de cosmético fica aberta: qualquer um pode registrar LYVENA para skincare, e não conseguimos impedir. Pior — quando chegar a fase 4, <b>nós</b> é que teríamos que renomear a nossa própria linha. A taxa é por categoria, então depositar as duas custa mais hoje. É o preço de não perder metade do plano depois.</p>
-      <p style="font-size:14.5px;margin-top:11px;opacity:.82">Duas vizinhas ativas na Flórida que não bloqueiam, mas vale conhecer: <b>LYVIA WELLNESS SOLUTIONS LLC</b> e <b>LYVE RESTORED WELLNESS, LLC</b>. São nomes de entidade, não marcas registradas.</p>
-    </div>
-
+<!-- ============ FECHAMENTO ============ -->
+<section class="end">
+  <div class="in">
+    <img class="logo rv" src="assets/logo-light.png" alt="Lyvena Health" width="900" height="435">
+    <div class="pq rv">Progress, quietly.</div>
+    <div class="ss rv">Science. Structure. Continuity.</div>
+    <div class="bb rv">Building better systems for better health.</div>
   </div>
 </section>
-
-<footer><div class="in">
-  LYVENA™ · Supplements LLC · outubro de 2026 · documento para os sócios<br>
-  Marca ainda não registrada — usar ™ até a concessão.
-</div></footer>
+<footer>Lyvena Health &nbsp;·&nbsp; Supplements LLC &nbsp;·&nbsp; Internal presentation</footer>
 
 <script>
-var PAL=[
- ['Natural Green','#103F35','Primária · 30%'],
- ['Off White','#F6F5F2','Base · 45%'],
- ['Beige','#E7D9CC','Base · 15%'],
- ['Terracotta','#B76545','Acento · 10%'],
- ['Sage Green','#8AA793','Apoio'],
- ['Ink','#0E1A15','Texto']
-];
-document.getElementById('pal').innerHTML='<div class="pal">'+PAL.map(function(c){
-  return '<div class="sw"><div class="k" style="background:'+c[1]+'"></div><div class="b">'
-    +'<div class="nm">'+c[0]+'</div><div class="hx">'+c[1]+'</div><div class="fn">'+c[2]+'</div></div></div>';
-}).join('')+'</div>';
+(function(){
+  /* tradução expansível */
+  document.querySelectorAll('.pt').forEach(function(box){
+    var btn=box.querySelector('.pt-t');
+    btn.addEventListener('click',function(){
+      var open=box.getAttribute('data-open')==='true';
+      box.setAttribute('data-open', open?'false':'true');
+      btn.setAttribute('aria-expanded', open?'false':'true');
+      btn.querySelector('.ar').textContent = open?'↓':'↑';
+    });
+  });
 
-var SHOTS=[
- ['assets/marca/pack-1.jpg','Embalagem · estudo',1500,1000],
- ['assets/marca/papelaria.jpg','Papelaria · estudo',1500,1000]
-];
-document.getElementById('gal').innerHTML='<div class="g g2">'+SHOTS.map(function(s){
-  return '<div class="shot"><img src="'+s[0]+'" alt="'+s[1]+'" width="'+s[2]+'" height="'+s[3]+'" loading="lazy">'
-    +'<div class="cap">'+s[1]+'</div></div>';
-}).join('')+'</div>';
+  /* reveal no scroll */
+  var els=[].slice.call(document.querySelectorAll('.rv'));
+  if(!('IntersectionObserver' in window) ||
+     window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+    els.forEach(function(e){e.classList.add('in-v');});
+    return;
+  }
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if(en.isIntersecting){ en.target.classList.add('in-v'); io.unobserve(en.target); }
+    });
+  },{rootMargin:'0px 0px -9% 0px',threshold:0.06});
+  els.forEach(function(e){io.observe(e);});
+})();
 </script>
 </body></html>

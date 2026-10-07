@@ -1,7 +1,6 @@
-# LYVENA — Marca
+# Lyvena Health
 
-Apresentação de marca da LYVENA (Supplements LLC): o nome, o conceito,
-a identidade visual e as aplicações.
+Institutional presentation — brand, concept, protocol model, growth model
+and long-term vision.
 
-Documento para discussão entre sócios. Marca ainda não registrada — usar ™
-até a concessão.
+English primary, with expandable Portuguese for internal readers.
